@@ -7,19 +7,18 @@ import java.util.Scanner;
  */
 public class Notas_aborte_media {
     public static void main(String[]args){
-        int sum =0, cantidad=0;
+        int cantidad= -1;
+        double nota=0,sum =0;
         Scanner sc = new Scanner(System.in);
-        System.out.println("Meta la nota (-1 para terminar)");
-        int nota = sc.nextInt();
-        while (nota != -1){
+
+        do {
             sum = sum +nota;
             cantidad++;
             System.out.println("Meta la nota (-1 para terminar)");
-            nota = sc.nextInt();
-        }
-        sc.close();
-        int media =sum/cantidad;
-        System.out.println("La media es: "+media);
+            nota = sc.nextDouble();
+        }while (nota!=-1);
 
+        sc.close();
+        if (cantidad!=0) System.out.println("La media es: "+sum/cantidad);
     }
 }
