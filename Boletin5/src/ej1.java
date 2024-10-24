@@ -12,6 +12,7 @@ public class ej1 {
             else if (n>0) positivos++;
             else ceros++;
         }
+        sc.close();
         System.out.println("Me has dado "+negativos+ " números negativos, "+positivos+ " números positivos y "+ceros+" ceros");
     }
 }
