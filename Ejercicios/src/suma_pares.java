@@ -9,6 +9,7 @@ public class suma_pares {
         for(int i=0;i<10;i++){
             if(i%2!=0) continue;
             sum =sum+i;
+            System.out.println("O número é "+i);
         }
         System.out.println(sum);
     }
