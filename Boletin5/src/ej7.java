@@ -12,6 +12,7 @@ public class ej7 {
         Scanner sc = new Scanner(System.in);
         System.out.println("¿De cúanta altura quieres el triángulo?");
         n = sc.nextInt();
+        sc.close();
         for (int i=1;i<=n;i++){
             for (int j=0;j<i;j++){
                 System.out.print("*");
