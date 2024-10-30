@@ -1,5 +1,10 @@
 import java.util.Scanner;
 
+/**
+ * Este código te pide dos numeros y te saca por pantalla los numeros entre medias
+ * @version 1.1
+ * @author Jorge Durán Cruz
+ */
 public class ej1 {
     public static void main(String[]args){
      intermedio();
