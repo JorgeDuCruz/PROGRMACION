@@ -6,6 +6,10 @@ import java.util.Scanner;
  * @author Jorge Durán Cruz
  */
 public class ej1 {
+    /**
+     * Es el función princial que pide dos numeros y luego llama a la funcion que mostrara los numeros intermedios
+     * @param args no se usa
+     */
     public static void main(String[]args){
         int nMin, nMax;
         Scanner sc = new Scanner(System.in);
@@ -15,6 +19,13 @@ public class ej1 {
         nMax = sc.nextInt();
         intermedio(nMin, nMax);
     }
+
+    /**
+     * Esta función recibe dos numeros de la función principal, verifica cual es más pequeño y muestra por pantalla los numeros intermedios
+     * @since 2.0
+     * @param min número más pequeño de los dos que recibe
+     * @param max número más grande de los dos que recibe
+     */
     static void intermedio(int min, int max){
         if(min>max) { //aqui me aseguro de que la variable min sea realmente el numero mas pequeño
             int aux = max;
