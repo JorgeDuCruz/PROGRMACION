@@ -1,6 +1,6 @@
 /**
  * Este código te pide un número n y te devuelve un triangulo de altura n hecho de *
- * @version 1.0
+ * @version 2.0
  * @author Jorge Durán Cruz
  */
 
@@ -14,8 +14,11 @@ public class ej7 {
         n = sc.nextInt();
         sc.close();
         for (int i=1;i<=n;i++){
+            for (int k=n;k>i;k--){
+                System.out.print(" ");
+            }
             for (int j=0;j<i;j++){
-                System.out.print("*");
+                System.out.print("* ");
 
             }
             System.out.println();
