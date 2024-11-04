@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 /**
  * Este código te pide dos numeros y te saca por pantalla los numeros entre medias
- * @version 3.0
+ * @version 4.0
  * @author Jorge Durán Cruz
  */
 public class ej1 {
@@ -18,10 +18,12 @@ public class ej1 {
         System.out.println("Dime outro número");
         num2 = sc.nextDouble();
         intermedio(num1, num2);
+        intermedio((int) num1);
     }
 
     /**
-     * Esta función recibe dos numeros de la función principal, verifica cual es más pequeño y muestra por pantalla los numeros intermedios
+     * Esta función recibe dos numeros de la función principal, verifica cual es más pequeño y muestra por
+     * pantalla los numeros intermedios
      * @since 2.0
      * @param min número más pequeño de los dos que recibe
      * @param max número más grande de los dos que recibe
@@ -40,7 +42,8 @@ public class ej1 {
     }
 
     /**
-     * Esta función recibe dos numeros decimales de la función principal, los redondea y llama otra funcion para que calcule los numeros comprendidos entre ellos
+     * Esta función recibe dos numeros decimales de la función principal, los redondea y llama otra funcion para que
+     * calcule los numeros comprendidos entre ellos
      * @since 3.0
      * @param num1 número más pequeño de los dos que recibe
      * @param num2 número más grande de los dos que recibe
@@ -49,5 +52,15 @@ public class ej1 {
         int num1Int=(int) Math.round(num1);
         int num2Int=(int) Math.round(num2);
         intermedio(num1Int,num2Int);
+    }
+
+    /**
+     * Esta funcion recibe un valor de la funcion pricnipal y llama a una funcion que muestra por pantalla los numeros
+     * comprendidos entre el 0 y el numero  recivido
+     * @since 4.0
+     * @param num1 es el número limite
+     */
+    static void intermedio(int num1){
+        intermedio(0,num1);
     }
 }
