@@ -3,16 +3,17 @@ import java.util.Scanner;
 /**
  * Calcula el factorial de un número que pide por tecaldo con una funcion recursiva
  * @author Jorge Durán cruz
- * @version 1.0
+ * @version 1.1
  */
 public class funcion_recursiva {
     public static void main(String[]args){
         long factorial;
         Scanner sc =new Scanner(System.in);
+        System.out.println("De que numero quieres el factorial?");
         int num= sc.nextInt();
         sc.close();
-        factorial=funcionRecursiva(num);
-        System.out.println(factorial);
+        factorial= factorialRecursiva(num);
+        System.out.println("El factorial de "+num+" es "+factorial);
 
     }
 
@@ -21,12 +22,12 @@ public class funcion_recursiva {
      * @param n número del que se quiere el factorial
      * @return valor del factorial de n
      */
-    static long funcionRecursiva(int n){
+    static long factorialRecursiva(int n){
         long res;
         if (n==0){
             res =1;
         }
-        else res =n*funcionRecursiva(n-1);
+        else res =n* factorialRecursiva(n-1);
         return res;
     }
 }
