@@ -40,7 +40,7 @@ public class funcion_recursiva {
 
     /**
      * Funcion que pide el valor de elevar el numero al exponente aterior para calcular la elevacion actual
-     * @param n base del numero que quieres elevar
+     * @param n base que quieres elevar
      * @param m exponente al que quieres elevar la base
      * @return valor de la base elevada al exponente
      */
