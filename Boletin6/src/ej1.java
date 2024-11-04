@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 /**
  * Este código te pide dos numeros y te saca por pantalla los numeros entre medias
- * @version 4.0
+ * @version 4.1
  * @author Jorge Durán Cruz
  */
 public class ej1 {
@@ -17,7 +17,9 @@ public class ej1 {
         num1 = sc.nextDouble();
         System.out.println("Dime outro número");
         num2 = sc.nextDouble();
-        intermedio(num1, num2);
+        sc.close();
+        if (num1-(int)num1==0 && num2-(int)num2==0) intermedio((int) num1,(int) num2);
+        else intermedio(num1, num2);
         intermedio((int) num1);
     }
 
