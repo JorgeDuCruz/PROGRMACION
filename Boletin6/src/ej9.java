@@ -12,13 +12,9 @@ public class ej9 {
         System.out.println("¿Cuantos numeros de Fibonaci quieres?");
         int numerosFionaci= sc.nextInt();
         sc.close();
-        resultado=serieFibonaci(numerosFionaci);
 
     }
     static int serieFibonaci(int n){
-        int res;
-        if (n==1) res=1;
-        else res =1+serieFibonaci(n-1);
-        return res;
+        return 0;
     }
 }
