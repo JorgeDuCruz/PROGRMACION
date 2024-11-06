@@ -1,5 +1,10 @@
 import java.util.Scanner;
 
+/**
+ * Este código te pide un numero y te devulve su factorial
+ * @version 1.0
+ * @author Jorge Durán cruz
+ */
 public class ej7 {
 
     public static void main(String[]args) {
@@ -13,7 +18,6 @@ public class ej7 {
 
     /**
      * Función que pide el factorial del número anterior al que recibe para calcular su factorial
-     * @since 2.0
      * @param n número del que se quiere el factorial
      * @return valor del factorial de n
      */
