@@ -8,7 +8,6 @@ import java.util.Scanner;
 public class ej6 {
     public static void main(String[]args){
         int a,b,sum1,sum2;
-        boolean amigos;
         Scanner sc = new Scanner(System.in);
         System.out.println("Dame el primer número");
         a = sc.nextInt();
