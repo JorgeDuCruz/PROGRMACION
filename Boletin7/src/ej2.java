@@ -7,9 +7,9 @@ public class ej2 {
             numeros[i] = (int) Math.floor(Math.random()*11);
         }
 
-        for (int i=0;i<numeros.length;i++){
+        for (int numero : numeros) {
 
-            if(numeros[i]<5) suspensos++;
+            if (numero < 5) suspensos++;
             else aprobados++;
         }
         System.out.println("Aprobaron "+ aprobados+" alumnos y suspendieron "+suspensos);
