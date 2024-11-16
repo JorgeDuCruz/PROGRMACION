@@ -12,7 +12,6 @@ public class ej3 {
                 "Verónica", "Felipe", "Marta", "Alberto", "Teresa",
                 "Tomás", "Nuria", "Gerardo", "Paula", "Luis", "Beatriz"
         };
-        int suspensos =0,aprobados =0,notaMedia=0,maxNota=0;
         for (int i=0;i<notas.length;i++){
             notas[i] = (int) Math.floor(Math.random()*11);
         }
