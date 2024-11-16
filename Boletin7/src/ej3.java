@@ -29,7 +29,7 @@ public class ej3 {
 
         System.out.println("Aprobados: ");
         for (int i=0;i<notas.length;i++) {
-            if (notas[i] >= 5) System.out.println(nombres[i]);;
+            if (notas[i] >= 5) System.out.println(nombres[i]);
         }
 
     }
