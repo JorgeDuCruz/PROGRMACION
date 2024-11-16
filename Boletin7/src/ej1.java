@@ -1,3 +1,8 @@
+/**
+ * Este codigo genera 6 numeros aleatorios entre el 0 y el 50 y luego los muestra en orden inverso
+ * @author Jorge Duran Cruz
+ * @version 1.0
+ */
 public class ej1 {
     public static void main(String[]args){
         int[] numeros= new int[6];
