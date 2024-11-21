@@ -20,6 +20,12 @@ public class taboas {
         System.out.println(Arrays.toString(numeros));
         funcionRevisar(numeros,numero);
     }
+
+    /**
+     * Recibe una tabla y un numero, revisa en que posicion de la tabla esta el numero y lo muestra. Si no esta muestra -1
+     * @param tabla conjunto de numeros sobre los que se buscara
+     * @param numero numero que se buscar en la tabla
+     */
     static void funcionRevisar(int[] tabla, int numero){
         int identificador=-1;
         for (int i=0;i<tabla.length;i++){
