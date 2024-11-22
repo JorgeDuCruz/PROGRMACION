@@ -1,6 +1,12 @@
 import java.util.Arrays;
 import java.util.Scanner;
 
+/**
+ * Programa que genera una tabla de valores desordenados y te pide un numero,
+ * luego comprueba si el numero esta en la tabla mediante una funcion extra y en caso de estar devuelve su indice
+ * @version 1.0
+ * @author Jorge Duran Cruz
+ */
 public class ej5 {
     public static void main(String[]args){
         int[] numeros=new int[30];
