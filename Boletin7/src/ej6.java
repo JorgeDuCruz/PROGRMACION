@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class busqueda_orden {
+public class ej6 {
     public static void main(String[]args) {
         int[] tablaOrden = {1,3,9,16,21,32,41,93,106};
         int medio,valor, linf = 0,lsup=tablaOrden.length-1, indice=-1;
