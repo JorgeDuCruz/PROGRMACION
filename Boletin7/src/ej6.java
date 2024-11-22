@@ -1,5 +1,12 @@
 import java.util.Scanner;
 
+/**
+ * Funcion que de una tabla de numeros ordenados pregunta por un numero
+ * busca si el numero esta en la lista y en caso de estar con que indice se identifica
+ * essto con un sistema de busqueda optimizado(buscar por mitades)
+ * @version 1.0
+ * @author Jorge Duran Cruz
+ */
 public class ej6 {
     public static void main(String[]args) {
         int[] tablaOrden = {1,3,9,16,21,32,41,93,106};
