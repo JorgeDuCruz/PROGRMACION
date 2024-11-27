@@ -15,6 +15,11 @@ public class ej9 {
         System.out.println(Arrays.toString(tabla));
     }
 
+    /**
+     * Funcion que recibe una tabla y elimina las repeticiones de la tabla
+     * @param base tabla con repetuciones
+     * @return tabla sin repeticiones
+     */
     static int[] tablaSinRepetir(int[] base) {
         int[] copiaBase = new int[base.length];
         int lonxitude = base.length;
@@ -34,7 +39,6 @@ public class ej9 {
                 posicion++;
             }
         }
-
         return tabla;
     }
 }
