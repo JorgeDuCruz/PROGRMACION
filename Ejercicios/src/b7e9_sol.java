@@ -10,6 +10,7 @@ public class b7e9_sol {
     }
     static int[] senRepetidos(int[] taboa){
         int[] temporal = new int[1];
+        temporal[0]=taboa[0];
         for (int elemento: taboa){
             if (busquedaBinaria(temporal,elemento) ==- 1){
                 int[] novo = new int[temporal.length+1];
