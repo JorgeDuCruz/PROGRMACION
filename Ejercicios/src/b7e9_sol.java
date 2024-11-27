@@ -1,7 +1,5 @@
 import java.util.Arrays;
 
-import static java.util.Arrays.binarySearch;
-import static java.util.Arrays.sort;
 
 public class b7e9_sol {
     public static void main(String[]args){
