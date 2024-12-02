@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 /**
  * Programa que pide una asignatura y te devuelve cuantas horas hay de esa asignatura
- * @version 0.1
+ * @version 1.0
  * @author Jorge Duran Cruz
  */
 public class ContarHorario {
@@ -19,9 +19,9 @@ public class ContarHorario {
         String asignatura= sc.next();
         sc.close();
         int conteo=0;
-        for (int i=0;i<horario.length;i++){
-            for (int j=0;j<horario[i].length;j++){
-                if (horario[i][j].equals(asignatura)) conteo++;
+        for (int dia=0;dia<horario.length;dia++){
+            for (int hora=0;hora<horario[dia].length;hora++){
+                if (horario[dia][hora].equals(asignatura)) conteo++;
             }
         }
         System.out.println("Tienes "+conteo+ " horas de "+asignatura);
