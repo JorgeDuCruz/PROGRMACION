@@ -20,25 +20,14 @@ public class Horario {
         int hora =sc.nextInt();
 
         sc.close();
-        int diaNum;
-        switch (dia){
-            case "Lunes" :
-            case "lunes" :diaNum=0;break;
-
-            case "Martes" :
-            case "martes" :diaNum=1;break;
-
-            case "Miercoles" :
-            case "miercoles" :diaNum=2;break;
-
-            case "Jueves" :
-            case "jueves" :diaNum=3;break;
-
-            case "Viernes" :
-            case "viernes" :diaNum=4;break;
-
-            default : diaNum=0;
-        }
+        int diaNum = switch (dia) {
+            case "Lunes", "lunes" -> 0;
+            case "Martes", "martes" -> 1;
+            case "Miercoles", "miercoles" -> 2;
+            case "Jueves", "jueves" -> 3;
+            case "Viernes", "viernes" -> 4;
+            default -> 0;
+        };
         System.out.println("El "+horario[0][diaNum]+" te toca: "+horario[hora][diaNum]);
     }
 }
