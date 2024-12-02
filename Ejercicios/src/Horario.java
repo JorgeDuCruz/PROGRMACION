@@ -5,10 +5,10 @@ public class Horario {
         String[][] horario={
                 {"Lunes","Martes","Miercoles","Jueves","Viernes"},
                 {"BD","BD","PROG","ING","COD"},
-                {"BD","BD","PROG","ING","LGM"},
-                {"BD","BD","PROG","SI","LGM"},
-                {"BD","SASP","LDM","SI","SI"},
-                {"PROG","SI","LDM","PROG","SI"},
+                {"BD","BD","PROG","ING","LMSXI"},
+                {"BD","BD","PROG","SI","LMSXI"},
+                {"BD","SASP","LMSXI","SI","SI"},
+                {"PROG","SI","LMSXI","PROG","SI"},
                 {"PROG","SI","COD","PROG","IPE"},
                 {"PROG","IPE","COD","PROG","IPE"},
         };
