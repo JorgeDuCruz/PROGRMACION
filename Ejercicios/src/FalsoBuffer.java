@@ -1,8 +1,8 @@
-import java.util.Arrays;
 import java.util.Scanner;
 
 /**
  * Usar una tabla para guardar y leer datos mediante un solo indice
+ * @version 1.0
  */
 public class FalsoBuffer {
     public static void main(String[]args){
