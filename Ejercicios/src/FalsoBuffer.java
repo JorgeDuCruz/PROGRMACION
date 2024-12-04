@@ -51,7 +51,7 @@ public class FalsoBuffer {
         }
         else {
             for (int i=0;i<=indice;i++){
-                System.out.println(tabla[i]);
+                System.out.println("El número es: "+tabla[i]);
             }
         }
     }
