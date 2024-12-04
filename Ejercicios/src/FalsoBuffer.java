@@ -19,7 +19,7 @@ public class FalsoBuffer {
                     break;
                 }
                 case 2:{
-                    cabeza=leer(buffer,cabeza);
+                    leer(buffer,cabeza);
                     break;
                 }
                 default: {
@@ -45,17 +45,14 @@ public class FalsoBuffer {
         return indice;
     }
 
-    static int leer(int[] tabla, int indice){
+    static void leer(int[] tabla, int indice){
         if (indice<0){
             System.out.println("No hay nada que leer");
-            return indice;
         }
         else {
             for (int i=0;i<=indice;i++){
                 System.out.println(tabla[i]);
             }
-            indice--;
-            return indice;
         }
     }
 }
