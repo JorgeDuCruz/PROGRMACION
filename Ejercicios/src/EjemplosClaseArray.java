@@ -12,16 +12,16 @@ public class EjemplosClaseArray {
         int[] num3=Arrays.copyOfRange(numeros,1,5);
         System.out.println(Arrays.toString(num2) +" y "+ Arrays.toString(num3));
         System.out.println(compararMatruces(num2,numeros));
+        System.out.println(Arrays.equals(num2,numeros));
     }
 
     static boolean compararMatruces(int[] a,int[] b){
         if (a.length!= b.length) return false;
         else {
-            boolean iguais=true;
             for (int i =0;i< a.length;i++){
                 if (a[i]!=b[i]) return false;
             }
-            return iguais;
+            return true;
         }
     }
 }
