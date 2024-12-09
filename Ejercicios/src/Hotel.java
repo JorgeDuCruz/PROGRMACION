@@ -36,33 +36,49 @@ public class Hotel {
         sc.close();
     }
 
+    /**
+     * Registra al cliente a la hhabitacion escogida
+     * @param hotel datos del hotel
+     * @param hab habitacion escogida
+     */
     static void registrar(String[][]hotel, int hab){
         Scanner sc =new Scanner(System.in);
-        System.out.println("Nombre:");
+        System.out.println("Nombre:");//pregunta el nombre del cliente que se quiere registra
         String nome= sc.next();
         int planta= hab%10 -1;
         int habitacion= hab/10 -1;
-        if (hotel[planta][habitacion]==null) hotel[planta][habitacion]=nome;
-        else {
+        if (hotel[planta][habitacion]==null) {//comprueba que la habitacion no tiene dueño para asignarselo
+            hotel[planta][habitacion]=nome; // si no tiene dueño registra al cliente como dueño
+        }
+        else {//si ya tiene dueño lo indica y mantiene el dueño anterior
             System.out.println("Habitacion "+hab+" ocupada. Eliga otra");
         }
     }
 
+    /**
+     * Libera una habitacion
+     * @param hotel datos del hotel
+     * @param hab habitacion que se va a vaciar
+     */
     static void liberar(String[][] hotel, int hab){
         int planta= hab%10 -1;
         int habitacion= hab/10 -1;
         hotel[planta][habitacion]=null;
     }
 
+    /**
+     * muestra la dispocion de las habitaciones del hotel entero
+     * @param hotel los datos de las habitaciones del hotel
+     */
     static void disposicionHabitacions(String[][] hotel){
-        for (int i=hotel.length-1;i>=0;i--){
-            for (int j=0;j< hotel[i].length;j++){
-                System.out.print((i+1)+""+j);
-                if (hotel[i][j]!=null)System.out.print(" "+hotel[i][j]);
-                else System.out.print(" ");
-                System.out.print("|");
+        for (int i=hotel.length-1;i>=0;i--){//pasa planta por planta
+            for (int j=0;j< hotel[i].length;j++){//pasa por las habitaciones de cada planta
+                System.out.print((i+1)+""+j);//muestra el numero de la habitacion
+                if (hotel[i][j]!=null)System.out.print(" "+hotel[i][j]); //muestra el nombre del usuario de la habitacion si lo tiene
+                else System.out.print(" ");// muestra un espacio en blanco si la habitacion no tiene dueño
+                System.out.print("|");// separa las habitaciones entre si
             }
-            System.out.println();
+            System.out.println();//separa las plantas entres si
         }
     }
 
