@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 /**
  * Hacer tres en raya funcional
- * @version 0.6
+ * @version 0.8
  * @author Jorge Duran Cruz
  */
 public class TresEnRaya {
@@ -39,6 +39,11 @@ public class TresEnRaya {
     }
 
     private static boolean TableroLleno(int[][] tablero) {
+        for (int i=0;i< tablero.length;i++){
+            for (int j =0;j< tablero[i].length;j++){
+                if (tablero[i][j]==0) return false;
+            }
+        }
         return true;
     }
 
