@@ -45,8 +45,8 @@ public class Hotel {
         Scanner sc =new Scanner(System.in);
         System.out.println("Nombre:");//pregunta el nombre del cliente que se quiere registra
         String nome= sc.next();
-        int planta= hab%10 -1;
-        int habitacion= hab/10 -1;
+        int planta= hab/10 -1;
+        int habitacion= hab%10 -1;
         if (hotel[planta][habitacion]==null) {//comprueba que la habitacion no tiene dueño para asignarselo
             hotel[planta][habitacion]=nome; // si no tiene dueño registra al cliente como dueño
         }
@@ -61,8 +61,8 @@ public class Hotel {
      * @param hab habitacion que se va a vaciar
      */
     static void liberar(String[][] hotel, int hab){
-        int planta= hab%10 -1;
-        int habitacion= hab/10 -1;
+        int planta= hab/10 -1;
+        int habitacion= hab&10 -1;
         hotel[planta][habitacion]=null;
     }
 
@@ -75,7 +75,7 @@ public class Hotel {
             for (int j=0;j< hotel[i].length;j++){//pasa por las habitaciones de cada planta
                 System.out.print((i+1)+""+j);//muestra el numero de la habitacion
                 if (hotel[i][j]!=null)System.out.print(" "+hotel[i][j]); //muestra el nombre del usuario de la habitacion si lo tiene
-                else System.out.print(" ");// muestra un espacio en blanco si la habitacion no tiene dueño
+                else System.out.print(" Vacia");// muestra un espacio en blanco si la habitacion no tiene dueño
                 System.out.print("|");// separa las habitaciones entre si
             }
             System.out.println();//separa las plantas entres si
