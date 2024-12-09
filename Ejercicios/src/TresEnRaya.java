@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 /**
  * Hacer tres en raya funcional
- * @version 0.8
+ * @version 1.0
  * @author Jorge Duran Cruz
  */
 public class TresEnRaya {
@@ -20,7 +20,8 @@ public class TresEnRaya {
             coordX1= sc.nextInt();
             System.out.println("Coordenada Y:");
             coordY1 = sc.nextInt();
-            tablero[coordX1][coordY1]=1;
+            if (tablero[coordX1][coordY1]==0)tablero[coordX1][coordY1]=1;
+            else System.out.println("Casilla ya ocupada, pierdes turno");
             if (HayVictoria(tablero)){
                 System.out.println("Gano el jugador 1");
                 break;
@@ -30,7 +31,8 @@ public class TresEnRaya {
             coordX2= sc.nextInt();
             System.out.println("Coordenada Y:");
             coordY2 = sc.nextInt();
-            tablero[coordX2][coordY2]=2;
+            if (tablero[coordX2][coordY2]==0)tablero[coordX2][coordY2]=2;
+            else System.out.println("Casilla ya ocupada, pierdes turno");
             if (HayVictoria(tablero)){
                 System.out.println("Gano el jugador 2");
                 break;
