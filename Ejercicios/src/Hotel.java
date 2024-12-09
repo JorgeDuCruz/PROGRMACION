@@ -13,7 +13,6 @@ public class Hotel {
     public static void main(String[]args){
         String[][] hotel= new String[4][6];
         int accion;
-        boolean registrado;
         Scanner sc=new Scanner(System.in);
         do {
             System.out.println("Que quieres hacer? registrarte(0), Irte(1) o Ver habitaciones libres(2) [terminar(-1)]");
@@ -22,7 +21,7 @@ public class Hotel {
                 case 0 : {
                     System.out.println("Habitacion:");
                     int habitacion= sc.nextInt();
-                    registrado=Registrar(hotel, habitacion);
+                    Registrar(hotel, habitacion);
                 }break;
                 case 1 : {
                     System.out.println("Habitacion:");
@@ -37,7 +36,7 @@ public class Hotel {
         sc.close();
     }
 
-    static boolean Registrar(String[][]hotel, int hab){
+    static void Registrar(String[][]hotel, int hab){
         Scanner sc =new Scanner(System.in);
         System.out.println("Nombre:");
         String nome= sc.next();
@@ -46,10 +45,7 @@ public class Hotel {
         if (hotel[planta][habitacion]==null) hotel[planta][habitacion]=nome;
         else {
             System.out.println("Habitacion "+hab+" ocupada. Eliga otra");
-            return false;
         }
-        return true;
-
     }
 
     static void Liberar(String[][] hotel,int hab){
