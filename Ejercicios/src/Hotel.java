@@ -53,8 +53,6 @@ public class Hotel {
     }
 
     static void Liberar(String[][] hotel,int hab){
-        Scanner sc =new Scanner(System.in);
-        System.out.println("Planta:");
         int planta= hab%10 -1;
         int habitacion= hab/10 -1;
         hotel[planta][habitacion]=null;
