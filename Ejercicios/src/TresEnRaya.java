@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 /**
  * Hacer tres en raya funcional
- * @version 0.5
+ * @version 0.6
  * @author Jorge Duran Cruz
  */
 public class TresEnRaya {
@@ -45,10 +45,16 @@ public class TresEnRaya {
     private static boolean HayVictoria(int[][] tablero) {
         boolean victoria=false;
         for (int i =0;i<tablero.length;i++){ // Comprueba la victoria en horizontal
-            if (tablero[i][0]==tablero[i][1] && tablero[i][0]==tablero[i][2])victoria=true;
+            if (tablero[i][0]==tablero[i][1] && tablero[i][0]==tablero[i][2]){
+                victoria=true;
+                break;
+            }
         }
         for (int i =0;i<tablero.length;i++){ // Comprueba la victoria en vertical
-            if (tablero[0][i]==tablero[1][i] && tablero[0][i]==tablero[2][i])victoria=true;
+            if (tablero[0][i]==tablero[1][i] && tablero[0][i]==tablero[2][i]){
+                victoria=true;
+                break;
+            }
         }
         if (tablero[0][0]==tablero[1][1] && tablero[0][0]==tablero[2][2]) victoria=true;
         if (tablero[2][0]==tablero[1][1] && tablero[2][0]==tablero[0][2]) victoria=true;
