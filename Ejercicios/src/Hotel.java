@@ -21,14 +21,14 @@ public class Hotel {
                 case 0 : {
                     System.out.println("Habitacion:");
                     int habitacion= sc.nextInt();
-                    Registrar(hotel, habitacion);
+                    registrar(hotel, habitacion);
                 }break;
                 case 1 : {
                     System.out.println("Habitacion:");
                     int habitacion= sc.nextInt();
-                    Liberar(hotel, habitacion);
+                    liberar(hotel, habitacion);
                 }break;
-                case 2 : HabitacionBaleira(hotel);break;
+                case 2 : disposicionHabitacions(hotel);break;
                 case -1: break;
                 default : System.out.println("Seleccione una accion");
             }
@@ -36,7 +36,7 @@ public class Hotel {
         sc.close();
     }
 
-    static void Registrar(String[][]hotel, int hab){
+    static void registrar(String[][]hotel, int hab){
         Scanner sc =new Scanner(System.in);
         System.out.println("Nombre:");
         String nome= sc.next();
@@ -48,13 +48,13 @@ public class Hotel {
         }
     }
 
-    static void Liberar(String[][] hotel,int hab){
+    static void liberar(String[][] hotel, int hab){
         int planta= hab%10 -1;
         int habitacion= hab/10 -1;
         hotel[planta][habitacion]=null;
     }
 
-    static void HabitacionBaleira(String[][] hotel){
+    static void disposicionHabitacions(String[][] hotel){
         for (int i=hotel.length-1;i>=0;i--){
             for (int j=0;j< hotel[i].length;j++){
                 System.out.print((i+1)+""+j);
