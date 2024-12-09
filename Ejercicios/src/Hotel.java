@@ -47,11 +47,16 @@ public class Hotel {
         String nome= sc.next();
         int planta= hab/10 -1;
         int habitacion= hab%10 -1;
-        if (hotel[planta][habitacion]==null) {//comprueba que la habitacion no tiene dueño para asignarselo
-            hotel[planta][habitacion]=nome; // si no tiene dueño registra al cliente como dueño
+        if (!(planta<hotel.length) || !(habitacion<hotel[planta].length)){// comprueba si la habitacion existe en el hotel
+            System.out.println("No hay esa habitacion");
         }
-        else {//si ya tiene dueño lo indica y mantiene el dueño anterior
-            System.out.println("Habitacion "+hab+" ocupada. Eliga otra");
+        else {
+            if (hotel[planta][habitacion]==null) {//comprueba que la habitacion no tiene dueño para asignarselo
+                hotel[planta][habitacion]=nome; // si no tiene dueño registra al cliente como dueño
+            }
+            else {//si ya tiene dueño lo indica y mantiene el dueño anterior
+                System.out.println("Habitacion "+hab+" ocupada. Eliga otra");
+            }
         }
     }
 
