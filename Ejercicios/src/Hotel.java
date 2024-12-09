@@ -55,16 +55,12 @@ public class Hotel {
     }
 
     static void HabitacionBaleira(String[][] hotel){
-        for (int i=0;i<hotel.length;i++){
+        for (int i=hotel.length-1;i>=0;i--){
             for (int j=0;j< hotel[i].length;j++){
                 System.out.print((i+1)+""+j);
                 if (hotel[i][j]!=null)System.out.print(" "+hotel[i][j]);
                 else System.out.print(" ");
-                System.out.print("||");
-            }
-            System.out.println();
-            for (int j=0;j< hotel[i].length;j++){
-                System.out.print("~~");
+                System.out.print("|");
             }
             System.out.println();
         }
