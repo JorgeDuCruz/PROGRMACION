@@ -73,10 +73,10 @@ public class Hotel {
     static void disposicionHabitacions(String[][] hotel){
         for (int i=hotel.length-1;i>=0;i--){//pasa planta por planta
             for (int j=0;j< hotel[i].length;j++){//pasa por las habitaciones de cada planta
-                System.out.print((i+1)+""+j);//muestra el numero de la habitacion
+                System.out.print((i+1)+""+j+":");//muestra el numero de la habitacion
                 if (hotel[i][j]!=null)System.out.print(" "+hotel[i][j]); //muestra el nombre del usuario de la habitacion si lo tiene
                 else System.out.print(" Vacia");// muestra un espacio en blanco si la habitacion no tiene dueño
-                System.out.print("|");// separa las habitaciones entre si
+                System.out.print(" | ");// separa las habitaciones entre si
             }
             System.out.println();//separa las plantas entres si
         }
