@@ -5,9 +5,9 @@ public class ej2 {
 
         System.out.println(Separar(cadena,separador));
 
-        separador ='_';
+        String remplazo ="\\_";
 
-        System.out.println(Remplazar(cadena,separador));
+        System.out.println(Remplazar(cadena,remplazo));
 
         cadena = "123jo 4.5,4590";
         separador = 'X';
@@ -27,10 +27,16 @@ public class ej2 {
         System.out.println(cadea);
         return cadea.toString();
     }
-    static String Remplazar(String cadena,char separador){
-        cadena = cadena.replace(' ',separador);
-        System.out.println(cadena);
-        return cadena;
+    static String Remplazar(String cadena,String rem){
+        String cad ="";
+        int inicio=0,limite = cadena.indexOf(' ');
+        while(limite!=-1){
+            cad=cad+cadena.substring(inicio,limite)+rem;
+            inicio=limite+1;
+            limite=cadena.indexOf(' ',limite+1);
+        }
+        cad = cad+cadena.substring(inicio);
+        return cad;
     }
     static String QuitarDigito(String cadena, char separador){
         for (int i=0;i<10;i++){
