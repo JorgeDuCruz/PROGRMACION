@@ -5,6 +5,8 @@ public class ej1 {
         System.out.println();
         TresUltimos(cadena);
         System.out.println();
+        TresUltimos2(cadena);
+        System.out.println();
         CadaDos(cadena);
         System.out.println();
         NormalEInvertyido(cadena);
@@ -24,6 +26,9 @@ public class ej1 {
             System.out.println(cadena.charAt(i));
             i++;
         }while (i<cadena.length());
+    }
+    public static void TresUltimos2(String cadena){
+        System.out.println(cadena.substring(cadena.length()-3));
     }
 
     public static void CadaDos(String cadena){
