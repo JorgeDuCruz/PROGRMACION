@@ -6,10 +6,10 @@ public class Ahorcado {
         String letrasDescubiertas ="", adivinacion;
         Scanner sc = new Scanner(System.in);
         do {
-            System.out.println("introduce una plabra");
+            System.out.println("introduce una plabra (La palabra debe tener más de una letra)");
             palabra= sc.next();
 
-        }while (palabra.isBlank());
+        }while (palabra.isBlank() || palabra.length()==1);
 
         palabra = palabra.toUpperCase();
 
@@ -45,7 +45,7 @@ public class Ahorcado {
     private static void mostrarPalabra(char [] palabra, String letras) {
         for (int i =0;i<palabra.length;i++){
 
-            if (letras.contains(""+palabra[i])){
+            if (letras.contains(""+palabra[i] )|| !Character.isLetter(palabra[i])){
 
                 System.out.print(palabra[i]);
             }
