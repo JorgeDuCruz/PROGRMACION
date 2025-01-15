@@ -19,7 +19,8 @@ public class Ahorcado_Variable {
         String adivinacion;
 
         do {
-            System.out.println("Adivine palabra o letra");
+            System.out.println("La palabra a adivinar es: "+ Arrays.toString(descubierto));
+            System.out.println("Jugador 2, introduce la palabra o letra a adivinar");
             adivinacion = sc.next();
             adivinacion = adivinacion.toUpperCase().trim();
             if (adivinacion.length() > 1) {
@@ -36,7 +37,7 @@ public class Ahorcado_Variable {
 
                 } while (indice >= 0);
             }
-            System.out.println(descubierto);
+
             if (Arrays.equals(deslglosePalabra, descubierto)){
                 System.out.println("Ganaste");
                 break;
