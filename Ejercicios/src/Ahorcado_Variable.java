@@ -3,6 +3,7 @@ import java.util.Scanner;
 
 public class Ahorcado_Variable {
     public static void main(String[] args){
+        //PintarMunheco(7);
         String palabra = ElegirPalabra();
         String descubierto = CambiarPorGuiones(palabra);
         System.out.println(descubierto);
@@ -55,6 +56,18 @@ public class Ahorcado_Variable {
             System.out.println("Te quedan "+intentos+" intentos");
 
         }while (intentos>0);
+    }
+
+    private static void PintarMunheco(int ronda){
+        String munheco = """
+                   ___ ___
+                  |       |
+                  |       ○
+                  |      /|\\
+                  |      / \\
+                __|__
+                """;
+        System.out.println(munheco);
     }
 
     private static String CambiarPorGuiones(String cad) {
