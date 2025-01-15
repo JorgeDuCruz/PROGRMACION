@@ -9,7 +9,7 @@ public class Ahorcado {
             System.out.println("introduce una plabra (La palabra debe tener más de una letra)");
             palabra= sc.next();
 
-        }while (palabra.isBlank() || palabra.length()==1);
+        }while (palabra.isBlank() || palabra.length()==1 || palabra.contains("_"));
 
         palabra = palabra.toUpperCase();
 
