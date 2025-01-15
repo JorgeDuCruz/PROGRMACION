@@ -17,6 +17,7 @@ public class Ahorcado_Variable {
         char[] deslglosePalabra = palabra.toCharArray();
         char[] descubierto = guiones.toCharArray();
         String adivinacion;
+        boolean acierto = false;
 
         do {
             System.out.println("La palabra a adivinar es: "+ Arrays.toString(descubierto));
@@ -33,7 +34,10 @@ public class Ahorcado_Variable {
             } else {
                 do {
                     indice = palabra.indexOf(adivinacion, indice + 1);
-                    if (indice >= 0) descubierto[indice] = deslglosePalabra[indice];
+                    if (indice >= 0) {
+                        descubierto[indice] = deslglosePalabra[indice];
+                        acierto = true;
+                    }
 
                 } while (indice >= 0);
             }
@@ -42,7 +46,12 @@ public class Ahorcado_Variable {
                 System.out.println("Ganaste");
                 break;
             }
-            intentos--;
+            if (acierto){
+                acierto = false;
+            }
+            else {
+                intentos--;
+            }
             System.out.println("Te quedan "+intentos+" intentos");
 
         }while (intentos>0);
