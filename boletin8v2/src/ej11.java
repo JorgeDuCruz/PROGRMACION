@@ -6,7 +6,7 @@ public class ej11 {
     }
 
     private static String FormatearNome(String nome, String apelido) {
-        String formateo = null;
+        String formateo;
         nome = nome.replace(" ","");
         nome = Character.toUpperCase(nome.charAt(0))+nome.toLowerCase().substring(1);
         apelido = apelido.replace(" ","");
