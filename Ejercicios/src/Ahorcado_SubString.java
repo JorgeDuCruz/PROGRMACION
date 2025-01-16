@@ -40,7 +40,7 @@ public class Ahorcado_SubString {
             }
 
             if (guiones.equals(palabra)){
-                System.out.println("Ganaste");
+                System.out.println("Ganaste la palabra era: " + palabra);
                 break;
             }
             if (acierto){
