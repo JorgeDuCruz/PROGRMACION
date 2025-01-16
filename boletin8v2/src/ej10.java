@@ -8,7 +8,7 @@ public class ej10 {
         boolean valido = false;
         if (contra.length()>7){
             if (!contra.toLowerCase().equals(contra) && !contra.toUpperCase().equals(contra)){
-                for (int i=0;i<11;i++){
+                for (int i=0;i<10;i++){
                     if (contra.contains(""+i)){
                         valido = true;
                         break;
