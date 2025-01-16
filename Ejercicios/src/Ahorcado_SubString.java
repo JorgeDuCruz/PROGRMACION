@@ -31,12 +31,8 @@ public class Ahorcado_SubString {
             } else {
                 do {
                     indice = palabra.indexOf(adivinacion, indice + 1);
-                    if (indice > 0) {
+                    if (indice >=0) {
                         guiones = guiones.substring(0,indice)+adivinacion+guiones.substring(indice+1);
-                        acierto = true;
-                    }
-                    else if (indice ==0){
-                        guiones = adivinacion+guiones.substring(indice+1);
                         acierto = true;
                     }
 
