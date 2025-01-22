@@ -7,7 +7,7 @@ public class ej12 {
     private static void AnalisisTexto(String texto) {
         int palabras=0,caracteres=0,tamPalabra=0,tamPalabraMasLarga=0;
         String palabraMasLarga=null;
-        texto=texto+" ";
+        texto=texto.trim()+" ";
         if (!(texto.isBlank())){
             for (int i=0;i<texto.length();i++){
                 if (texto.charAt(i)==' ' && !(texto.charAt(i-1)== ' ')){
