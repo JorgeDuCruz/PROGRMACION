@@ -10,7 +10,7 @@ public class ej3 {
 
         System.out.println(Remplazar(cadena,separador,limite));
 
-        cadena = "123jo 4.5,4590";
+        cadena = "qa123jo 4.5,4590";
         separador = 'X';
 
         System.out.println(QuitarDigito(cadena,separador,limite));
@@ -42,7 +42,8 @@ public class ej3 {
     }
     static String QuitarDigito(String cadena, char separador, int lim){
         String cad = "";
-        for (int i=0;i<cadena.length() && lim>0;i++){
+        int i=0;
+        for (;i<cadena.length() && lim>0;i++){
             if (Character.isDigit(cadena.charAt(i))){
                 lim--;
                 cad=cad+separador;
@@ -50,6 +51,7 @@ public class ej3 {
             else cad=cad+cadena.charAt(i);
 
         }
+        cad = cad+cadena.substring(i);
         return cad;
     }
     static String Anhadir(String cadena, char separador, int lim){
