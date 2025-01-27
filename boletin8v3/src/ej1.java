@@ -6,8 +6,9 @@ public class ej1 {
     }
 
     private static String[] DIvidirPalabra(String palabra, int i) {
-        String [] palabras = new String[palabra.length()-(i-1)];
-        for (int j=0;j<palabra.length()-(i-1);j++){
+        int sec = palabra.length()-(i-1);
+        String [] palabras = new String[sec];
+        for (int j=0;j<sec;j++){
             palabras[j] = palabra.substring(j,j+i);
         }
 
