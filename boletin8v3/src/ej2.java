@@ -9,7 +9,8 @@ public class ej2 {
     private static String CrearHTML(String texto) {
         String html;
         int titulo = texto.indexOf("\n");
-        html = "<h1>"+texto.substring(0,titulo).trim()+"</h1>"+"\n"+"<p>"+texto.substring(titulo+1).trim()+"</p>";
+        html = "<html>\n"+"<h1>"+texto.substring(0,titulo).trim()+"</h1>"+"\n"+"<p>"+texto.substring(titulo+1).trim()+"</p>"+
+                "\n</html>";
 
         return html;
     }
