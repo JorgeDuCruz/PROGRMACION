@@ -1,5 +1,3 @@
-import javax.swing.text.html.HTML;
-
 public class ej2 {
     public static void main(String[] args){
         System.out.println(CrearHTML("""
