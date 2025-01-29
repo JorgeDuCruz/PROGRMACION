@@ -1,9 +1,11 @@
 public class ej2 {
     public static void main(String[] args){
-        System.out.println(CrearHTML("""
+        String contido = """
                 Esto es el titulo
                 Esto es un parrafo
-                y esto sigue siendo parrafo"""));
+                y esto sigue siendo parrafo""";
+
+        System.out.println(CrearHTML(contido));
     }
 
     private static String CrearHTML(String texto) {
