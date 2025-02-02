@@ -7,7 +7,16 @@ public class ej6 {
 
     private static String VocalSiguiente(String cadena) {
         String cambio="";
-
+        for (int i =0;i<cadena.length();i++){
+            switch (Character.toLowerCase(cadena.charAt(i))){
+                case 'a'->cambio=cambio+'e';
+                case 'e'->cambio=cambio+'i';
+                case 'i'->cambio=cambio+'o';
+                case 'o'->cambio=cambio+'u';
+                case 'u'->cambio=cambio+'a';
+                default -> cambio=cambio+cadena.charAt(i);
+            }
+        }
         return cambio;
     }
 
