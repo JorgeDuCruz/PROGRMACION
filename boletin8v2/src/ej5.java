@@ -7,8 +7,8 @@ public class ej5 {
     private static String PrimeraMayus(String cadena) {
         String cambio = "";
         String[] palabras = cadena.split(" ");
-        for (int i=0;i<palabras.length;i++){
-            cambio = cambio+Character.toUpperCase(palabras[i].charAt(0))+palabras[i].substring(1)+" ";
+        for (String palabra : palabras) {
+            cambio = cambio + Character.toUpperCase(palabra.charAt(0)) + palabra.substring(1) + " ";
         }
         return cambio;
     }
@@ -16,8 +16,8 @@ public class ej5 {
     private static String PrimeraLetra(String cadena) {
         String siglas = "";
         String[] palabras = cadena.split(" ");
-        for (int i=0;i<palabras.length;i++){
-            siglas = siglas+String.valueOf(Character.toUpperCase(palabras[i].charAt(0)));
+        for (String palabra : palabras) {
+            siglas = siglas + Character.toUpperCase(palabra.charAt(0));
         }
         return siglas;
     }
