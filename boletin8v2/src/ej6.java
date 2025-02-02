@@ -3,6 +3,19 @@ public class ej6 {
         System.out.println(Consonates("Logaritmos"));
         System.out.println(Vocales("Logaritmos"));
         System.out.println(VocalSiguiente("vestiario"));
+        System.out.println(IsPalindromo("anita lava la tina"));
+    }
+
+    private static boolean IsPalindromo(String cadena) {
+        boolean palindromo = false;
+        String cad = cadena.replace(" ","");
+        StringBuilder reves = new StringBuilder(cadena);
+        reves.reverse();
+        if (cad.equals(reves.toString().replace(" ",""))){
+            palindromo = true;
+        }
+
+        return palindromo;
     }
 
     private static String VocalSiguiente(String cadena) {
