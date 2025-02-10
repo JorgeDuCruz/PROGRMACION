@@ -66,33 +66,28 @@ public class Persoaxe {
     }
 
     public void setVida(int vida) {
-        if (vida>5) System.out.println("Moita vida");
-        else if (vida<1) System.out.println("Pouca vida");
-        else this.vida = vida;
+        if (vida<=5 && vida>=0) this.vida = vida;
+        else this.vida = 3;
     }
 
     public void setResistencia(int resistencia) {
-        if (resistencia<1) System.out.println("Pouca resistencia");
-        else if (resistencia>5) System.out.println("Moita resitencia");
-        else this.resistencia = resistencia;
+        if (resistencia<=5 && resistencia>=0) this.resistencia = resistencia;
+        else this.resistencia = 3;
     }
 
     public void setForza(int forza) {
-        if (forza<1) System.out.println("Pouca forza");
-        else if (forza>5) System.out.println("Moita forza");
-        else this.forza = forza;
+        if (forza<=5 && forza>=0) this.forza = forza;
+        else this.forza = 3;
     }
 
     public void setExperiencia(int experiencia) {
-        if (experiencia<1) System.out.println("Pouca experiencia");
-        else if (experiencia>5) System.out.println("Moita experiencia");
-        else this.experiencia = experiencia;
+        if (experiencia<=5 && experiencia>=0) this.experiencia = experiencia;
+        else this.experiencia = 0;
     }
 
     public void setVelocidad(int velocidad) {
-        if (velocidad<1) System.out.println("Pouca velocidade");
-        else if (velocidad>5) System.out.println("Moita velocidade");
-        else this.velocidad = velocidad;
+        if (velocidad<=5 && velocidad>=0) this.velocidad = velocidad;
+        else this.velocidad = 3;
     }
 
     public void setApariencia(String apariencia) {
