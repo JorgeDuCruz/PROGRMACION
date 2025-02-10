@@ -30,9 +30,7 @@ public class Persoaxe {
         setVelocidad(velocidad);
         setExperiencia(experiencia);
         setApariencia(apariencia);
-        this.habilidades=new String[5];
         setHabilidades(habilidades);
-        this.equipamento=new String[5];
         setEquipamento(equipamento);
     }
 
@@ -45,6 +43,7 @@ public class Persoaxe {
     //SETTERS
     public void setEquipamento(String[] equipamento) {
         int numEquipamento=equipamento.length;
+        this.equipamento=new String[5];
         if (numEquipamento>5) numEquipamento=5;
         for (int i =0;i<numEquipamento;i++){
             this.equipamento[i]=equipamento[i];
@@ -53,6 +52,7 @@ public class Persoaxe {
 
     public void setHabilidades(String[] habilidades) {
         int numHabilidades=habilidades.length;
+        this.habilidades=new String[5];
         if (numHabilidades>5) numHabilidades=5;
         for (int i =0;i<numHabilidades;i++){
             this.habilidades[i]=habilidades[i];
