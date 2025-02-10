@@ -23,13 +23,13 @@ public class Persoaxe {
     }
 
     public Persoaxe(String nome, int vida, int resistencia, int forza, int velocidad, int experiencia, String apariencia, String[] habilidades, String[] equipamento) {
-        this.nome = nome;
-        this.vida = vida;
-        this.resistencia = resistencia;
-        this.forza = forza;
-        this.velocidad = velocidad;
-        this.experiencia = experiencia;
-        this.apariencia = apariencia;
+        setNome(nome);
+        setVida(vida);
+        setResistencia(resistencia);
+        setForza(forza);
+        setVelocidad(velocidad);
+        setExperiencia(experiencia);
+        setApariencia(apariencia);
         this.habilidades=new String[5];
         setHabilidades(habilidades);
         this.equipamento=new String[5];
