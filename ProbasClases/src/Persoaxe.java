@@ -60,32 +60,46 @@ public class Persoaxe {
     }
 
     public void setNome(String nome) {
-        this.nome = nome;
+        if (nome.length()>15) System.out.println("Nome moi longo");
+        else if (nome.isEmpty()) System.out.println("Nome moi curto");
+        else this.nome = nome;
     }
 
     public void setVida(int vida) {
-        this.vida = vida;
+        if (vida>5) System.out.println("Moita vida");
+        else if (vida<1) System.out.println("Pouca vida");
+        else this.vida = vida;
     }
 
     public void setResistencia(int resistencia) {
-        this.resistencia = resistencia;
+        if (resistencia<1) System.out.println("Pouca resistencia");
+        else if (resistencia>5) System.out.println("Moita resitencia");
+        else this.resistencia = resistencia;
     }
 
     public void setForza(int forza) {
-        this.forza = forza;
+        if (forza<1) System.out.println("Pouca forza");
+        else if (forza>5) System.out.println("Moita forza");
+        else this.forza = forza;
     }
 
     public void setExperiencia(int experiencia) {
-        this.experiencia = experiencia;
+        if (experiencia<1) System.out.println("Pouca experiencia");
+        else if (experiencia>5) System.out.println("Moita experiencia");
+        else this.experiencia = experiencia;
     }
 
     public void setVelocidad(int velocidad) {
-        this.velocidad = velocidad;
+        if (velocidad<1) System.out.println("Pouca velocidade");
+        else if (velocidad>5) System.out.println("Moita velocidade");
+        else this.velocidad = velocidad;
     }
 
     public void setApariencia(String apariencia) {
         this.apariencia = apariencia;
     }
+
+
     //GETTER
     public String getNome() {
         return nome;
