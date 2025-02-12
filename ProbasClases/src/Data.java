@@ -90,7 +90,7 @@ public class Data {
     }
 
     private boolean isBIsiesto(){
-       boolean bisietso = !(ano%4!=0 || ano%100==0 && ano%400!=0);
+       boolean bisietso = (ano%4==0 && ano%100!=0 || ano%400==0);
        return bisietso;
     }
     //SETTERS
