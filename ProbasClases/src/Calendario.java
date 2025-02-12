@@ -4,7 +4,7 @@ public class Calendario {
     private int ano;
     //MAIN
     public static void main(String[] args) {
-        Calendario data1 = new Calendario(26,2,2012);
+        Calendario data1 = new Calendario(26,2,1900);
         data1.mostrarData();
         data1.incrementarDia();
         data1.mostrarData();
@@ -38,7 +38,8 @@ public class Calendario {
     //METODOS
     public void mostrarData(){
         int yy = ano%100;
-        System.out.println(dia+"/"+mes+"/"+yy);
+        if (yy!=0) System.out.println(dia+"/"+mes+"/"+yy);
+        else System.out.println(dia+"/"+mes+"/"+ano);
     }
     public boolean dataIgual(Calendario data2){
         boolean iguais = dia == data2.getDia();
