@@ -2,7 +2,19 @@ public class Calendario {
     private int dia;
     private int mes;
     private int ano;
-
+    //MAIN
+    public static void main(String[] args) {
+        Calendario data1 = new Calendario(26,2,2012);
+        data1.mostrarData();
+        data1.incrementarDia();
+        data1.mostrarData();
+        data1.incrementarDia();
+        data1.mostrarData();
+        data1.incrementarDia();
+        data1.mostrarData();
+        data1.incrementarDia();
+        data1.mostrarData();
+    }
     //CONSTRUCTORES
 
     public Calendario(int dia, int mes, int ano) {
@@ -41,29 +53,29 @@ public class Calendario {
         }
         else if (dia==28 && mes ==2 && (ano%4!=0 || ano%100==0 && ano%400!=0)) { //Si no es bisiesto
             dia = 1;
-            setMes(mes++);
+            setMes(mes+1);
         }
         else if (dia==28 && mes ==2) {//Siempre sera bisiesto si llega aqui en febrero
             dia++;
         }
         else if (dia==29 && mes ==2) {
             dia = 1;
-            setMes(mes++);
+            setMes(mes+1);
         }
         else if (dia==31){
             dia=1;
-            setMes(mes++);
+            setMes(mes+1);
         }
         else if (dia==30 && (mes==4 || mes==6 || mes==9 || mes==11)){
             dia =1;
-            setMes(mes++);
+            setMes(mes+1);
         }
     }
     public void incrementarMes(){
-        setMes(mes++);
+        setMes(mes+1);
     }
     public void incrementarAno(){
-        setAno(ano++);
+        setAno(ano+1);
     }
 
     //SETTERS
