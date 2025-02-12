@@ -96,18 +96,12 @@ public class Data {
     //SETTERS
 
     public void setDia(int dia) {
-        if (dia>0 && dia<32){
-            if (mes==2 && isBIsiesto() && dia<30){
-                this.dia=dia;
-            }
-            else if (mes==2 && !isBIsiesto() && dia<29){
-                this.dia=dia;
-            } else if (dia<31 && (mes==4 || mes==6 || mes==9 || mes==11)) {
-                this.dia=dia;
-            } else if (mes==1 || mes==3 || mes==5 || mes==7 || mes==8 || mes==10|| mes==12) {
-                this.dia=dia;
-            }
-            else this.dia=1;
+        int[] limites ={31,28,31,30,31,30,31,31,30,31,30,31};
+        if (isBIsiesto()){
+            limites[1]=29;
+        }
+        if (dia>0 && dia<limites[mes-1]){
+            this.dia=dia;
         }
         else this.dia=1;
     }
