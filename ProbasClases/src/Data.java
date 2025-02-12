@@ -87,7 +87,7 @@ public class Data {
         if (isBIsiesto()){
             limites[1]=29;
         }
-        return limites[mes];
+        return limites[mes-1];
     }
     //SETTERS
 
