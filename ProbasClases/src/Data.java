@@ -52,7 +52,7 @@ public class Data {
     public void incrementarDia(){
         if (dia+1>diaLimite()) { //si el dia esta en el limite cambia de mes
             dia = 1;
-            setMes(mes+1);
+            incrementarMes();
         }
         else dia++;
     }
