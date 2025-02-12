@@ -4,7 +4,7 @@ public class Data {
     private int ano;
     //MAIN
     public static void main(String[] args) {
-        Data data1 = new Data(29,2,2001);
+        Data data1 = new Data(29,12,2001);
         data1.mostrarData();
         data1.incrementarDia();
         data1.mostrarData();
@@ -38,7 +38,8 @@ public class Data {
     //METODOS
     public void mostrarData(){
         int yy = ano%100;
-        if (yy!=0) System.out.println(dia+"/"+mes+"/"+yy);
+        if (yy>0 && yy<10) System.out.println(dia+"/"+mes+"/0"+yy);
+        else if (yy!=0) System.out.println(dia+"/"+mes+"/"+yy);
         else System.out.println(dia+"/"+mes+"/"+ano);
     }
     public boolean dataIgual(Data data2){
@@ -113,6 +114,7 @@ public class Data {
         }
         else if (mes>12){
             this.mes = mes-((mes/12)*12);
+            setAno(ano+1);
         }
     }
 
