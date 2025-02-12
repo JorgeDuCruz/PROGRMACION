@@ -52,7 +52,7 @@ public class Calendario {
         if (dia<28){
             dia++;
         }
-        else if (dia==28 && mes ==2 && (ano%4!=0 || ano%100==0 && ano%400!=0)) { //Si no es bisiesto
+        else if (dia==28 && mes ==2 && isBIsiesto()) { //Si no es bisiesto
             dia = 1;
             setMes(mes+1);
         }
@@ -72,13 +72,27 @@ public class Calendario {
             setMes(mes+1);
         }
     }
+
     public void incrementarMes(){
         setMes(mes+1);
     }
+
     public void incrementarAno(){
         setAno(ano+1);
     }
 
+    public String dataToString(){
+        int yy = ano%100;
+        String data;
+        if (yy!=0) data = dia+"/"+mes+"/"+yy;
+        else data = (dia+"/"+mes+"/"+ano);
+        return data;
+    }
+
+    private boolean isBIsiesto(){
+       boolean bisietso = !(ano%4!=0 || ano%100==0 && ano%400!=0);
+       return bisietso;
+    }
     //SETTERS
 
     public void setDia(int dia) {
