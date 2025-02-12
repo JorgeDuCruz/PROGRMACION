@@ -4,7 +4,7 @@ public class Data {
     private int ano;
     //MAIN
     public static void main(String[] args) {
-        Data data1 = new Data(26,2,1900);
+        Data data1 = new Data(30,2,1900);
         data1.mostrarData();
         data1.incrementarDia();
         data1.mostrarData();
@@ -18,15 +18,15 @@ public class Data {
     //CONSTRUCTORES
 
     public Data(int dia, int mes, int ano) {
-        setDia(dia);
         setMes(mes);
         setAno(ano);
+        setDia(dia);
     }
 
     public Data(int dia, int mes) {
-        setDia(dia);
         setMes(mes);
         ano=2025;
+        setDia(dia);
     }
 
     public Data() {
@@ -96,8 +96,18 @@ public class Data {
     //SETTERS
 
     public void setDia(int dia) {
-        if (dia<31 && dia>0){
-            this.dia=dia;
+        if (dia>0 && dia<32){
+            if (mes==2 && isBIsiesto() && dia<30){
+                this.dia=dia;
+            }
+            else if (mes==2 && !isBIsiesto() && dia<29){
+                this.dia=dia;
+            } else if (dia<31 && (mes==4 || mes==6 || mes==9 || mes==11)) {
+                this.dia=dia;
+            } else if (mes==1 || mes==3 || mes==5 || mes==7 || mes==8 || mes==10|| mes==12) {
+                this.dia=dia;
+            }
+            else this.dia=1;
         }
         else this.dia=1;
     }
@@ -112,7 +122,8 @@ public class Data {
     }
 
     public void setAno(int ano) {
-        this.ano = ano;
+        if (ano>-1) this.ano = ano;
+        else this.ano=2025;
     }
 
     //GETTERS
