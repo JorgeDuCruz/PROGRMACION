@@ -1,10 +1,10 @@
-public class Calendario {
+public class Data {
     private int dia;
     private int mes;
     private int ano;
     //MAIN
     public static void main(String[] args) {
-        Calendario data1 = new Calendario(26,2,1900);
+        Data data1 = new Data(26,2,1900);
         data1.mostrarData();
         data1.incrementarDia();
         data1.mostrarData();
@@ -17,19 +17,19 @@ public class Calendario {
     }
     //CONSTRUCTORES
 
-    public Calendario(int dia, int mes, int ano) {
+    public Data(int dia, int mes, int ano) {
         setDia(dia);
         setMes(mes);
         setAno(ano);
     }
 
-    public Calendario(int dia, int mes) {
+    public Data(int dia, int mes) {
         setDia(dia);
         setMes(mes);
         ano=2025;
     }
 
-    public Calendario() {
+    public Data() {
         dia=1;
         mes=1;
         ano=2025;
@@ -41,7 +41,7 @@ public class Calendario {
         if (yy!=0) System.out.println(dia+"/"+mes+"/"+yy);
         else System.out.println(dia+"/"+mes+"/"+ano);
     }
-    public boolean dataIgual(Calendario data2){
+    public boolean dataIgual(Data data2){
         boolean iguais = dia == data2.getDia();
         iguais = iguais && mes == data2.getMes();
         iguais = iguais &&  ano== data2.getAno();
