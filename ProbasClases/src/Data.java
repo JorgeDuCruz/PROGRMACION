@@ -50,26 +50,8 @@ public class Data {
     }
 
     public void incrementarDia(){
-        if (dia<28){
-            dia++;
-        }
-        else if (dia==28 && mes ==2 && isBIsiesto()) { //Si no es bisiesto
+        if (dia+1>diaLimite()) { //si el dia esta en el limite cambia de mes
             dia = 1;
-            setMes(mes+1);
-        }
-        else if (dia==28 && mes ==2) {//Siempre sera bisiesto si llega aqui en febrero
-            dia++;
-        }
-        else if (dia==29 && mes ==2) {
-            dia = 1;
-            setMes(mes+1);
-        }
-        else if (dia==31){
-            dia=1;
-            setMes(mes+1);
-        }
-        else if (dia==30 && (mes==4 || mes==6 || mes==9 || mes==11)){
-            dia =1;
             setMes(mes+1);
         }
         else dia++;
@@ -96,14 +78,17 @@ public class Data {
        boolean bisietso = (ano%4==0 && ano%100!=0 || ano%400==0);
        return bisietso;
     }
-    //SETTERS
-
-    public void setDia(int dia) {
+    private int diaLimite(){
         int[] limites ={31,28,31,30,31,30,31,31,30,31,30,31};
         if (isBIsiesto()){
             limites[1]=29;
         }
-        if (dia>0 && dia<=limites[mes-1]){
+        return limites[mes];
+    }
+    //SETTERS
+
+    public void setDia(int dia) {
+        if (dia>0 && dia<=diaLimite()){
             this.dia=dia;
         }
         else this.dia=1;
