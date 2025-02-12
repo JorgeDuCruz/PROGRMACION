@@ -58,7 +58,11 @@ public class Data {
     }
 
     public void incrementarMes(){
-        setMes(mes+1);
+        if (mes==12){
+            setMes(1);
+            setAno(ano+1);
+        }
+        else setMes(mes+1);
     }
 
     public void incrementarAno(){
@@ -98,10 +102,7 @@ public class Data {
         if (mes<13 && mes>0){
             this.mes = mes;
         }
-        else if (mes>12){
-            this.mes = mes-((mes/12)*12);
-            setAno(ano+1);
-        }
+        else this.mes=1;
     }
 
     public void setAno(int ano) {
