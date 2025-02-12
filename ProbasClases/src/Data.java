@@ -4,7 +4,7 @@ public class Data {
     private int ano;
     //MAIN
     public static void main(String[] args) {
-        Data data1 = new Data(30,2,1900);
+        Data data1 = new Data(29,2,2001);
         data1.mostrarData();
         data1.incrementarDia();
         data1.mostrarData();
@@ -71,6 +71,7 @@ public class Data {
             dia =1;
             setMes(mes+1);
         }
+        else dia++;
     }
 
     public void incrementarMes(){
@@ -100,7 +101,7 @@ public class Data {
         if (isBIsiesto()){
             limites[1]=29;
         }
-        if (dia>0 && dia<limites[mes-1]){
+        if (dia>0 && dia<=limites[mes-1]){
             this.dia=dia;
         }
         else this.dia=1;
