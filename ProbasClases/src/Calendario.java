@@ -39,11 +39,11 @@ public class Calendario {
         if (dia<28){
             dia++;
         }
-        else if (dia==28 && mes ==2 && (ano%4!=0 || ano%400==0)) {
+        else if (dia==28 && mes ==2 && (ano%4!=0 || ano%100==0 && ano%400!=0)) { //Si no es bisiesto
             dia = 1;
             setMes(mes++);
         }
-        else if (dia==28 && mes ==2 && (ano%4==0 && ano%400!=0)) {
+        else if (dia==28 && mes ==2) {//Siempre sera bisiesto si llega aqui en febrero
             dia++;
         }
         else if (dia==29 && mes ==2) {
