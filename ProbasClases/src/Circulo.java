@@ -39,10 +39,10 @@ public class Circulo extends Punto{
         return radio*2;
     }
     public double obterArea(){
-        return radio*3.14*3.14;
+        return Math.PI*Math.pow(radio,2);
     }
     public double obterPerimetro(){
-        return radio*2*3.14;
+        return radio*2*Math.PI;
     }
     public String toString(){
         return "circunferencia de radio "+radio+" y centro en "+super.toString();
