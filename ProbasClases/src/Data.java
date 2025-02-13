@@ -69,12 +69,8 @@ public class Data {
         setAno(ano+1);
     }
 
-    public String dataToString(){
-        int yy = ano%100;
-        String data;
-        if (yy>0 && yy<10) data=(dia+"/"+mes+"/0"+yy);
-        else if (yy!=0) data=(dia+"/"+mes+"/"+yy);
-        else data=(dia+"/"+mes+"/"+ano);
+    public String toString(){
+        String data=(dia+"/"+mes+"/"+ano);
         return data;
     }
 
