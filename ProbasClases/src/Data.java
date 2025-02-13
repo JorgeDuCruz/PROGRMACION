@@ -42,7 +42,7 @@ public class Data {
         else if (yy!=0) System.out.println(dia+"/"+mes+"/"+yy);
         else System.out.println(dia+"/"+mes+"/"+ano);
     }
-    public boolean dataIgual(Data data2){
+    public boolean equals(Data data2){
         boolean iguais = dia == data2.getDia();
         iguais = iguais && mes == data2.getMes();
         iguais = iguais &&  ano== data2.getAno();
