@@ -2,6 +2,7 @@ public class Punto {
     private double X;
     private double Y;
 
+    //CONSTRUCTORES
     public Punto(double x, double y){
         setX(x);
         setY(y);
@@ -16,6 +17,7 @@ public class Punto {
         setY(num);
     }
 
+    //GETTERS
     public double getX() {
         return X;
     }
@@ -24,6 +26,7 @@ public class Punto {
         return Y;
     }
 
+    //SETTERS
     public void setX(double x) {
         if (x>=0){
             this.X = x;
@@ -38,5 +41,9 @@ public class Punto {
         else this.Y = y*(-1);
     }
 
+    //METODOS
+    public boolean equals(Punto p2){
+        return X==p2.getX() && Y== p2.getY();
+    }
 }
 
