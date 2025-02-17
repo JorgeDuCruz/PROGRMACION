@@ -23,6 +23,14 @@ public class Cilindro extends Circulo{
         super();
         altura=1;
     }
+    public Cilindro(Circulo cir, double altura){
+        super(cir.getRadio(), cir.getX(), cir.getY());
+        this.altura=altura;
+    }
+    public Cilindro(Punto punto,double altura, double radio){
+        super(radio,punto.getX(), punto.getY());
+        this.altura=altura;
+    }
 
     //SETTER
 
