@@ -5,15 +5,6 @@ public class Data {
     //MAIN
     public static void main(String[] args) {
         Data data1 = new Data(29,12,2001);
-        data1.mostrarData();
-        data1.incrementarDia();
-        data1.mostrarData();
-        data1.incrementarDia();
-        data1.mostrarData();
-        data1.incrementarDia();
-        data1.mostrarData();
-        data1.incrementarDia();
-        data1.mostrarData();
     }
     //CONSTRUCTORES
 
@@ -49,12 +40,13 @@ public class Data {
         return iguais;
     }
 
-    public void incrementarDia(){
-        if (dia+1>diaLimite()) { //si el dia esta en el limite cambia de mes
-            dia = 1;
+    public String incrementarDia(int dias){
+        if (dia+dias>diaLimite()) { //si el dia esta en el limite cambia de mes
+            dia = dias+dia-diaLimite();
             incrementarMes();
         }
-        else dia++;
+        else dia=dias+dia;
+        return toString();
     }
 
     public void incrementarMes(){
