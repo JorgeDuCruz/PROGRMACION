@@ -44,6 +44,7 @@ public class Data {
         if (dia+dias>diaLimite()) { //si el dia esta en el limite cambia de mes
             dia = dias+dia-diaLimite();
             incrementarMes();
+            if (dia>diaLimite())incrementarDia(0);
         }
         else dia=dias+dia;
         return toString();
