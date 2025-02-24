@@ -36,7 +36,7 @@ public class ListaV2 {
         System.out.println(lista+"\b");
     }
     public void engadirUltimo(int valor){
-        if (inicio==null){
+        if (estaValeira()){
             inicio=new Nodo(valor);
         }
         else {
