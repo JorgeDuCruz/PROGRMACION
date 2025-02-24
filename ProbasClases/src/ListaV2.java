@@ -1,5 +1,6 @@
 public class ListaV2 {
     private Nodo inicio;
+    private Nodo ultimo;
     private int tamanho=0;
 
     //CONSTRUCTORES
@@ -38,10 +39,12 @@ public class ListaV2 {
     public void engadirUltimo(int valor){
         if (estaValeira()){
             inicio=new Nodo(valor);
+            ultimo=inicio;
         }
         else {
-            Nodo nodS = nodoUltimo();
+            Nodo nodS = ultimo;
             nodS.setPunteiroSeguinte(new Nodo(valor));
+            ultimo=nodS.getPunteiroSeguinte();
         }
 
         tamanho++;
@@ -51,11 +54,12 @@ public class ListaV2 {
         tamanho++;
     }
     public int obterUltimo(){
-        return nodoUltimo().getValor();
+        return ultimo.getValor();
     }
     public int obterPrimeiro(){
         return inicio.getValor();
     }
+    /*
     private Nodo nodoUltimo(){
         Nodo nodS = inicio;
         while (nodS.getPunteiroSeguinte()!=null){
@@ -63,5 +67,6 @@ public class ListaV2 {
         }
         return nodS;
     }
+    */
 
 }
