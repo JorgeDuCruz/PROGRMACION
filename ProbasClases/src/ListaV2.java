@@ -28,15 +28,22 @@ public class ListaV2 {
         Nodo nodS=inicio;
         for (int i =0;i<tamanho;i++){
             if (nodS!=null){
-                lista=lista+nodS.getValor();
+                lista=lista+nodS.getValor()+",";
                 nodS=nodS.getPunteiroSeguinte();
             }
             else break;
         }
+        System.out.println(lista+"\b");
     }
     public void engadirUltimo(int valor){
-        Nodo nodS = nodoUltimo();
-        nodS.setPunteiroSeguinte(new Nodo(valor));
+        if (inicio==null){
+            inicio=new Nodo(valor);
+        }
+        else {
+            Nodo nodS = nodoUltimo();
+            nodS.setPunteiroSeguinte(new Nodo(valor));
+        }
+
         tamanho++;
     }
     public void engadirPrimeiro(int valor){
