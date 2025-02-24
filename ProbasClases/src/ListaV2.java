@@ -21,7 +21,7 @@ public class ListaV2 {
 
     //METODOS
     public boolean estaValeira(){
-        return tamanho!=0;
+        return tamanho==0;
     }
     public void listar(){
         String lista="";
