@@ -1,5 +1,7 @@
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
 
 import static org.junit.jupiter.api.Assertions.*;
 class DataTest {
@@ -114,5 +116,23 @@ class DataTest {
     void incrementarDia9() {
         Data d1 = new Data(1,5,2014);
         assertEquals("1/5/2015",d1.incrementarDia(365));
+    }
+
+    @ParameterizedTest(name = "{0},{1},{2} +{3} --> {4}")
+    @CsvSource({
+            "1,5,2015, 1, 2/5/2015 ",
+            "30,6,2015, 1, 1/7/2015",
+            "28,2,2016, 1, 29/2/2016",
+            "29,2,2016, 1, 1/3/2016",
+            "1,5,2015, 4, 5/5/2015",
+            "28,5,2015, 4, 1/6/2015",
+            "30,5,2015, 31, 30/6/2015",
+            "1,5,2015, 61, 1/7/2015",
+            "1,5,2015, 92, 1/8/2015",
+            "1,5,2014, 365, 1/5/2015"
+    })
+    void add(int dia, int mes, int anho, int dias, String resultadoEsperado){
+        Data d1 = new Data(dia,mes,anho);
+        assertEquals(resultadoEsperado,d1.incrementarDia(dias));
     }
 }
