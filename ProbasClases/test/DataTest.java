@@ -118,7 +118,7 @@ class DataTest {
         assertEquals("1/5/2015",d1.incrementarDia(365));
     }
 
-    @ParameterizedTest(name = "{0},{1},{2} +{3} --> {4}")
+    @ParameterizedTest(name = "{0}/{1}/{2} +{3} --> {4}")
     @CsvSource({
             "1,5,2015, 1, 2/5/2015 ",
             "30,6,2015, 1, 1/7/2015",
