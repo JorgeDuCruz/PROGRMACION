@@ -1,18 +1,20 @@
 package Boletin10Ej2;
 
-public abstract class Traballadores extends MembroAsociacion{
-    private String dataIngreso;
+import Datas.Data;
 
-    public Traballadores(String dni, String nome, String dataIngreso) {
+public abstract class Traballadores extends MembroAsociacion{
+    private Data dataIngreso;
+
+    public Traballadores(String dni, String nome, Data dataIngreso) {
         super(dni, nome);
         setDataIngreso(dataIngreso);
     }
 
     public String getDataIngreso() {
-        return dataIngreso;
+        return dataIngreso.toString();
     }
 
-    public void setDataIngreso(String dataIngreso) {
+    public void setDataIngreso(Data dataIngreso) {
         this.dataIngreso = dataIngreso;
     }
 }

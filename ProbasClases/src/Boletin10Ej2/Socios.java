@@ -1,15 +1,14 @@
 package Boletin10Ej2;
-
-import java.util.Date;
+import Datas.Data;
 
 public class Socios extends MembroAsociacion implements CalculoGastosIngresos{
 
     private String direccion;
     private String provincia;
-    private Date dataAlta;
+    private Data dataAlta;
     private double cuota;
 
-    public Socios(String dni, String nome, double cuota, Date dataAlta, String direccion, String provincia) {
+    public Socios(String dni, String nome, double cuota, Data dataAlta, String direccion, String provincia) {
         super(dni, nome);
         setCuota(cuota);
         setDataAlta(dataAlta);
@@ -25,7 +24,7 @@ public class Socios extends MembroAsociacion implements CalculoGastosIngresos{
         this.cuota = cuota;
     }
 
-    public void setDataAlta(Date dataAlta) {
+    public void setDataAlta(Data dataAlta) {
         this.dataAlta = dataAlta;
     }
 
