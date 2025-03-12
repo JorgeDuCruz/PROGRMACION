@@ -10,10 +10,26 @@ public class Asalariados extends Traballadores implements CalculoGastosIngresos{
 
     public Asalariados(String dni, String nome, Data dataIngreso, String cargo, int irpf, double soldo, int ss) {
         super(dni, nome, dataIngreso);
+        setCargo(cargo);
+        setIrpf(irpf);
+        setSoldo(soldo);
+        setSs(ss);
+    }
+
+    public void setCargo(String cargo) {
         this.cargo = cargo;
-        this.irpf = irpf;
-        this.soldo = soldo;
-        this.ss = ss;
+    }
+
+    public void setIrpf(int irpf) {
+        this.irpf = Math.abs(irpf);
+    }
+
+    public void setSoldo(double soldo) {
+        this.soldo = Math.abs(soldo);
+    }
+
+    public void setSs(int ss) {
+        this.ss = Math.abs(ss);
     }
 
     @Override

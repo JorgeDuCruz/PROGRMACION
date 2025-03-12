@@ -21,7 +21,7 @@ public class Socios extends MembroAsociacion implements CalculoGastosIngresos{
     }
 
     public void setCuota(double cuota) {
-        this.cuota = cuota;
+        this.cuota = Math.abs(cuota);
     }
 
     public void setDataAlta(Data dataAlta) {
