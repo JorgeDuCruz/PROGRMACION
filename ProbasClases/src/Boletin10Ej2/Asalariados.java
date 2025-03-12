@@ -34,7 +34,7 @@ public class Asalariados extends Traballadores implements CalculoGastosIngresos{
 
     @Override
     public String aCadea() {
-        return "Traballador "+getNome()+" con DNI "+getDni()+" contratado o "+getDataIngreso()+" con soldo de "+soldo+"€ encargado de "+cargo+" ten una seguridad social "+ss+" e un IRPF "+irpf;
+        return "Traballador "+getNome()+" con DNI "+getDni()+" contratado o "+getDataIngreso()+" con soldo de "+soldo+"€ encargado de "+cargo+" ten una seguridad social del "+ss+"% e un IRPF del "+irpf+"%";
     }
 
     @Override

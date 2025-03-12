@@ -17,7 +17,7 @@ public class Socios extends MembroAsociacion implements CalculoGastosIngresos{
     }
 
     public String aCadea() {
-        return "Socio "+getNome()+" co DNI "+getDni()+" da provincia "+getProvincia()+" de direccion "+getDireccion()+" dado de alta "+getDataAlta()+ " paga "+getCuota()+"€ al mes";
+        return "Socio "+getNome()+" co DNI "+getDni()+" da provincia "+getProvincia()+", direccion "+getDireccion()+" dado de alta o "+getDataAlta()+ " paga "+getCuota()+"€ al mes";
     }
 
     public void setCuota(double cuota) {

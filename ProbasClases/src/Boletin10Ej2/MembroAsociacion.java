@@ -11,7 +11,7 @@ public abstract class MembroAsociacion {
 
     public void setDni(String dni) {
         if (dni.length()==9 && Character.toUpperCase(dni.charAt(8))==calcularLetra(dni)) this.dni = dni;
-        else this.dni="00000000A";
+        else this.dni="00000000T";
     }
 
     public void setNome(String nome) {
