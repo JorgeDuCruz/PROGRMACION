@@ -39,6 +39,6 @@ public class Asalariados extends Traballadores implements CalculoGastosIngresos{
 
     @Override
     public double gastosINgresos() {
-        return -soldo;
+        return -(soldo*0.15);
     }
 }
