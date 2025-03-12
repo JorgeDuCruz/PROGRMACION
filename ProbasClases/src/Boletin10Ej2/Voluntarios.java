@@ -10,10 +10,10 @@ public class Voluntarios extends Traballadores implements CalculoGastosIngresos{
 
     public Voluntarios(String dni, String nome, Data dataIngreso, int edade, int horas, String profesion, String trabajo) {
         super(dni, nome, dataIngreso);
-        this.edade = edade;
-        this.horas = horas;
-        this.profesion = profesion;
-        this.trabajo = trabajo;
+        setEdade(edade);
+        setHoras(horas);
+        setProfesion(profesion);
+        setTrabajo(trabajo);
     }
 
     public void setEdade(int edade) {
