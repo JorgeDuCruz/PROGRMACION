@@ -1,12 +1,14 @@
 package Boletin10Ej2;
 
+import Datas.Data;
+
 public class Voluntarios extends Traballadores implements CalculoGastosIngresos{
     private int edade;
     private String profesion;
     private int horas;
     private String trabajo;
 
-    public Voluntarios(String dni, String nome, String dataIngreso, int edade, int horas, String profesion, String trabajo) {
+    public Voluntarios(String dni, String nome, Data dataIngreso, int edade, int horas, String profesion, String trabajo) {
         super(dni, nome, dataIngreso);
         this.edade = edade;
         this.horas = horas;

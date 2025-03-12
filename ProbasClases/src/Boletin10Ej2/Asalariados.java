@@ -1,12 +1,14 @@
 package Boletin10Ej2;
 
+import Datas.Data;
+
 public class Asalariados extends Traballadores implements CalculoGastosIngresos{
     private double soldo;
     private String cargo;
     private int ss;
     private int irpf;
 
-    public Asalariados(String dni, String nome, String dataIngreso, String cargo, int irpf, double soldo, int ss) {
+    public Asalariados(String dni, String nome, Data dataIngreso, String cargo, int irpf, double soldo, int ss) {
         super(dni, nome, dataIngreso);
         this.cargo = cargo;
         this.irpf = irpf;
