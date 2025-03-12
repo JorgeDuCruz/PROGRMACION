@@ -55,6 +55,6 @@ public class Voluntarios extends Traballadores implements CalculoGastosIngresos{
 
     @Override
     public double gastosINgresos() {
-        return 3;
+        return -3;
     }
 }
