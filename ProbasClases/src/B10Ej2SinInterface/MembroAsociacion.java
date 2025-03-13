@@ -1,4 +1,4 @@
-package B10Ej2SinINterface;
+package B10Ej2SinInterface;
 
 public abstract class MembroAsociacion{
     private String dni;

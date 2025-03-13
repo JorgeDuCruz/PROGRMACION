@@ -1,4 +1,4 @@
-package B10Ej2SinINterface;
+package B10Ej2SinInterface;
 import Datas.Data;
 
 public class Socios extends MembroAsociacion {
