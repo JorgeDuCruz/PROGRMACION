@@ -1,3 +1,5 @@
+package Geometria;
+
 public class Cilindro extends Circulo{
     private double altura;
 
@@ -57,7 +59,7 @@ public class Cilindro extends Circulo{
     }
 
     public String toString(){
-        String dev ="Cilindro de altura "+altura+" "+super.toString();
+        String dev ="Geometria.Cilindro de altura "+altura+" "+super.toString();
         return dev;
     }
 }

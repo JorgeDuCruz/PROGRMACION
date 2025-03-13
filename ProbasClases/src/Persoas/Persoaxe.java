@@ -1,3 +1,5 @@
+package Persoas;
+
 public class Persoaxe {
     private String nome;
     private int vida;

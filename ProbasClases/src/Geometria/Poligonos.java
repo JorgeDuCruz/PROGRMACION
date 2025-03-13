@@ -1,3 +1,5 @@
+package Geometria;
+
 public class Poligonos extends Punto{
     private int caras;
     private double lado;

@@ -1,5 +1,12 @@
+import Animais.Aguia;
+import Animais.Can;
+import Animais.Canguro;
+import Animais.Golfinho;
 import Boletin10Ej2.*;
 import Datas.Data;
+import Geometria.*;
+import Persoas.ContaCorrente;
+import Persoas.Persoaxe;
 import inmobiliaria.PrazaGaraxeConTrasteiro;
 import inmobiliaria.Vivenda;
 
