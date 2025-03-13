@@ -2,6 +2,10 @@ import Animais.Aguia;
 import Animais.Can;
 import Animais.Canguro;
 import Animais.Golfinho;
+import B10Ej2SinInterface.AsalariadosABS;
+import B10Ej2SinInterface.MembroAsociacionABS;
+import B10Ej2SinInterface.SociosABS;
+import B10Ej2SinInterface.VoluntariosABS;
 import B10Ej2SoloInterface.MembroAsociacionIN;
 import B10Ej2SoloInterface.SociosIN;
 import Boletin10Ej2.*;
@@ -128,8 +132,20 @@ public class Main {
         trab1 = pepper;
         System.out.println(trab1.aCadea());
 
-        SociosIN pepes = new SociosIN("0000000T","Pepes",2500,new Data(1,5),"Pepelandia","Peterland");
-        System.out.println(pepes.aCadea());
+        SociosABS pepeAbs = new SociosABS("0000000T","PepeAbs",2500,new Data(1,5),"Pepelandia","Peterland");
+        System.out.println(pepeAbs.aCadea());
+        AsalariadosABS peterAbs = new AsalariadosABS("0000000T","PeterAbs",new Data(1,5),"Limpiador",25,1500,24);
+        System.out.println(peter.aCadea());
+        VoluntariosABS pepperAbs = new VoluntariosABS("0000000T","PepperAbs",new Data(1,5),25,5,"Ingenirio en puentes y caminos","Recogepelotas");
+        System.out.println(pepper.aCadea()+"\n");
+        MembroAsociacionABS[] memAbs = new MembroAsociacionABS[3];
+        memAbs[0]=pepeAbs;
+        memAbs[1]=peterAbs;
+        memAbs[2]=pepperAbs;
+        for (MembroAsociacionABS memAb : memAbs) {
+            System.out.println(memAb.aCadea());
+            System.out.println(memAb.gastosINgresos());
+        }
 
     }
 }
