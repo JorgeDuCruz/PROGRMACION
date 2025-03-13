@@ -147,5 +147,7 @@ public class Main {
             System.out.println(memAb.gastosINgresos());
         }
 
+        Data prueba = new Data("12-13/2025");
+        System.out.println(prueba.toString());
     }
 }

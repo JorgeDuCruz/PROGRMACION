@@ -22,6 +22,10 @@ public class Data {
         setDia(dia);
     }
 
+    public Data(String data){
+        setData(data);
+    }
+
     public Data() {
         dia=1;
         mes=1;
@@ -80,6 +84,23 @@ public class Data {
         }
         return limites[mes-1];
     }
+
+    private String[] comprobarData(String[] fecha) {
+        String numero="";
+        String[] retorno = {"1","1","1970"};
+        for (int i=0;i<fecha.length;i++){
+            for (int num =0;num<fecha[i].length();num++){
+                if (Character.isDigit(fecha[i].charAt(num))){
+                    numero=numero+fecha[i].charAt(num);
+                }else {
+                    return retorno;
+                }
+            }
+            fecha[i]=numero;
+            numero="";
+        }
+        return fecha;
+    }
     //SETTERS
 
     public void setDia(int dia) {
@@ -99,6 +120,25 @@ public class Data {
     public void setAno(int ano) {
         if (ano>-1) this.ano = ano;
         else this.ano=2025;
+    }
+
+    private void setData(String data){
+        String[] fecha = new String[3];
+        if (data.contains("-")){
+            fecha=data.split("-");
+            fecha=comprobarData(fecha);
+        } else if (data.contains("/")) {
+            fecha=data.split("/");
+            fecha=comprobarData(fecha);
+        }else {
+            System.out.println("Formato de fecha invalido, establecida fecha 1-1-1970");
+            fecha[0]="1";
+            fecha[1]="2";
+            fecha[2]="1970";
+        }
+        setMes(Integer.parseInt(fecha[1]));
+        setDia(Integer.parseInt(fecha[0]));
+        setAno(Integer.parseInt(fecha[2]));
     }
 
     //GETTERS
