@@ -2,13 +2,13 @@ package B10Ej2SoloInterface;
 
 import Datas.Data;
 
-public class Asalariados extends Traballadores implements CalculoGastosIngresos {
+public class AsalariadosIN extends TraballadoresIN implements CalculoGastosIngresosIN {
     private double soldo;
     private String cargo;
     private int ss;
     private int irpf;
 
-    public Asalariados(String dni, String nome, Data dataIngreso, String cargo, int irpf, double soldo, int ss) {
+    public AsalariadosIN(String dni, String nome, Data dataIngreso, String cargo, int irpf, double soldo, int ss) {
         super(dni, nome, dataIngreso);
         setCargo(cargo);
         setIrpf(irpf);

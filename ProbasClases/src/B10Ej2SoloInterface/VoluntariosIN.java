@@ -1,14 +1,14 @@
-package B10Ej2SinInterface;
+package B10Ej2SoloInterface;
 
 import Datas.Data;
 
-public class Voluntarios extends Traballadores  {
+public class VoluntariosIN extends TraballadoresIN implements CalculoGastosIngresosIN {
     private int edade;
     private String profesion;
     private int horas;
     private String trabajo;
 
-    public Voluntarios(String dni, String nome, Data dataIngreso, int edade, int horas, String profesion, String trabajo) {
+    public VoluntariosIN(String dni, String nome, Data dataIngreso, int edade, int horas, String profesion, String trabajo) {
         super(dni, nome, dataIngreso);
         setEdade(edade);
         setHoras(horas);
@@ -50,7 +50,7 @@ public class Voluntarios extends Traballadores  {
 
 
     public String aCadea() {
-        return "Voluntario "+getNome()+" con DNI "+getDni()+" ingreso o "+getDataIngreso()+" con "+getEdade()+" anos de idade, coa profesion de "+getProfesion()+" traballo "+getHoras()+" horas de "+getTrabajo();
+        return super.aCadea()+"\nIdade: "+edade+"\nProfesion: "+profesion+"\nHoras traballadas:"+horas+"\nTraballo: "+trabajo;
     }
 
     @Override

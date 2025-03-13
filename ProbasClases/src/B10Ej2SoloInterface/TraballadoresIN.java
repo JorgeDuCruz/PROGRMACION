@@ -2,10 +2,10 @@ package B10Ej2SoloInterface;
 
 import Datas.Data;
 
-public class Traballadores extends MembroAsociacion {
+public class TraballadoresIN extends MembroAsociacionIN {
     private Data dataIngreso;
 
-    public Traballadores(String dni, String nome, Data dataIngreso) {
+    public TraballadoresIN(String dni, String nome, Data dataIngreso) {
         super(dni, nome);
         setDataIngreso(dataIngreso);
     }

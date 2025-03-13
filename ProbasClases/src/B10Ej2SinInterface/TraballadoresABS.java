@@ -2,10 +2,10 @@ package B10Ej2SinInterface;
 
 import Datas.Data;
 
-public abstract class Traballadores extends MembroAsociacion {
+public abstract class TraballadoresABS extends MembroAsociacionABS {
     private Data dataIngreso;
 
-    public Traballadores(String dni, String nome, Data dataIngreso) {
+    public TraballadoresABS(String dni, String nome, Data dataIngreso) {
         super(dni, nome);
         setDataIngreso(dataIngreso);
     }

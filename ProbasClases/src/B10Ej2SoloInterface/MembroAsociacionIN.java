@@ -1,10 +1,10 @@
-package B10Ej2SinInterface;
+package B10Ej2SoloInterface;
 
-public abstract class MembroAsociacion{
+public class MembroAsociacionIN {
     private String dni;
     private String nome;
 
-    public MembroAsociacion(String dni, String nome) {
+    public MembroAsociacionIN(String dni, String nome) {
         setDni(dni);
         setNome(nome);
     }
@@ -33,6 +33,7 @@ public abstract class MembroAsociacion{
         return letra;
     }
 
-    public abstract String aCadea();
-    public abstract double gastosINgresos();
+    public String aCadea(){
+        return "DNI: "+dni+"\nNome: "+nome;
+    }
 }

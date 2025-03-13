@@ -1,14 +1,14 @@
 package B10Ej2SinInterface;
 import Datas.Data;
 
-public class Socios extends MembroAsociacion {
+public class SociosABS extends MembroAsociacionABS {
 
     private String direccion;
     private String provincia;
     private Data dataAlta;
     private double cuota;
 
-    public Socios(String dni, String nome, double cuota, Data dataAlta, String direccion, String provincia) {
+    public SociosABS(String dni, String nome, double cuota, Data dataAlta, String direccion, String provincia) {
         super(dni, nome);
         setCuota(cuota);
         setDataAlta(dataAlta);

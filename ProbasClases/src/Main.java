@@ -2,6 +2,8 @@ import Animais.Aguia;
 import Animais.Can;
 import Animais.Canguro;
 import Animais.Golfinho;
+import B10Ej2SoloInterface.MembroAsociacionIN;
+import B10Ej2SoloInterface.SociosIN;
 import Boletin10Ej2.*;
 import Datas.Data;
 import Geometria.*;
@@ -125,5 +127,9 @@ public class Main {
         Traballadores trab1;
         trab1 = pepper;
         System.out.println(trab1.aCadea());
+
+        SociosIN pepes = new SociosIN("0000000T","Pepes",2500,new Data(1,5),"Pepelandia","Peterland");
+        System.out.println(pepes.aCadea());
+
     }
 }
