@@ -136,4 +136,24 @@ class DataTest {
         Data d1 = new Data(dia,mes,anho);
         assertEquals(resultadoEsperado,d1.incrementarDia(dias));
     }
+
+    @ParameterizedTest(name = "Datas con formato dd/mm/aaaa")
+    @CsvSource({
+            "01/05/2015, 1, 2/5/2015 ",
+            "30/06/2015, 1, 1/7/2015",
+            "28/02/2016, 1, 29/2/2016",
+            "29/02/2016, 1, 1/3/2016",
+            "01/05/2015, 4, 5/5/2015",
+            "28/05/2015, 4, 1/6/2015",
+            "30/05/2015, 31, 30/6/2015",
+            "01/05/2015, 61, 1/7/2015",
+            "01/05/2015, 92, 1/8/2015",
+            "01/05/2014, 365, 1/5/2015"
+    })
+    void cadena(String data, int dias, String resultadoEsperado){
+        Data d1 = new Data(data);
+        assertEquals(resultadoEsperado,d1.incrementarDia(dias));
+    }
+    //Hacer un test incrementando 0 dias y incrementar dias negativos.
+    //Seguir probandando el constructor de String
 }
