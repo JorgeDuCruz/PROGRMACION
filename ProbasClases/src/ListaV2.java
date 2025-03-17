@@ -89,6 +89,7 @@ public class ListaV2 {
         if (!estaValeira()){
             ultimo=nodoPenultimo();
             if (ultimo!=null) ultimo.setPunteiroSeguinte(null);
+            else inicio=null;
             tamanho--;
         }
     }
