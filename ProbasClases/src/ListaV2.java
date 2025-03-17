@@ -20,6 +20,14 @@ public class ListaV2 {
         return tamanho;
     }
 
+    public Nodo getInicio() {
+        return inicio;
+    }
+
+    public Nodo getUltimo() {
+        return ultimo;
+    }
+
     //METODOS
     public boolean estaValeira(){
         return tamanho==0;
