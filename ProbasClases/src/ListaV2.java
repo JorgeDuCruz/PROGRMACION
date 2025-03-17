@@ -70,6 +70,9 @@ public class ListaV2 {
 
     private Nodo nodoPenultimo(){
         Nodo nodS = inicio;
+        if (tamanho==1){
+            return null;
+        }
         while (nodS.getPunteiroSeguinte()!=ultimo){
             nodS=nodS.getPunteiroSeguinte();
         }
@@ -93,11 +96,15 @@ public class ListaV2 {
     private void eliminarUltimoSinUltimo(){
         if (!estaValeira()){
             Nodo nodS =inicio;
-            while (nodS.getPunteiroSeguinte().getPunteiroSeguinte()!=null){
-                nodS=nodS.getPunteiroSeguinte();
+            if (nodS.getPunteiroSeguinte()==null){
+                inicio=null;
+            }else {
+                while (nodS.getPunteiroSeguinte().getPunteiroSeguinte()!=null){
+                    nodS=nodS.getPunteiroSeguinte();
+                }
+                nodS.setPunteiroSeguinte(null);
             }
-            nodS.setPunteiroSeguinte(null);
-            tamanho--;
+                tamanho--;
         }
     }
 
