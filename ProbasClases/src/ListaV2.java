@@ -90,4 +90,12 @@ public class ListaV2 {
         }
     }
 
+    private void eliminarUltimoSinUltimo(){
+        Nodo nodS =inicio;
+        while (nodS.getPunteiroSeguinte().getPunteiroSeguinte()!=null){
+            nodS=nodS.getPunteiroSeguinte();
+        }
+        nodS.setPunteiroSeguinte(null);
+    }
+
 }
