@@ -78,24 +78,27 @@ public class ListaV2 {
 
 
     public void elimiarPrimeiro(){
-        if (tamanho!=0){
+        if (!estaValeira()){
             inicio=inicio.getPunteiroSeguinte();
             tamanho--;
         }
     }
     public void eliminarUltimo(){
-        if (tamanho!=0){
+        if (!estaValeira()){
             ultimo=nodoPenultimo();
             tamanho--;
         }
     }
 
     private void eliminarUltimoSinUltimo(){
-        Nodo nodS =inicio;
-        while (nodS.getPunteiroSeguinte().getPunteiroSeguinte()!=null){
-            nodS=nodS.getPunteiroSeguinte();
+        if (!estaValeira()){
+            Nodo nodS =inicio;
+            while (nodS.getPunteiroSeguinte().getPunteiroSeguinte()!=null){
+                nodS=nodS.getPunteiroSeguinte();
+            }
+            nodS.setPunteiroSeguinte(null);
+            tamanho--;
         }
-        nodS.setPunteiroSeguinte(null);
     }
 
 }
