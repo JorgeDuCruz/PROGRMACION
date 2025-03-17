@@ -7,7 +7,7 @@ public class ListaV2 {
 
     public ListaV2(Nodo inicio) {
         this.inicio = inicio;
-        tamanho++;
+        if (inicio!=null) tamanho++;
     }
 
     public ListaV2() {
