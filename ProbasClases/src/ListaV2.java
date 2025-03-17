@@ -88,7 +88,7 @@ public class ListaV2 {
     public void eliminarUltimo(){
         if (!estaValeira()){
             ultimo=nodoPenultimo();
-            ultimo.setPunteiroSeguinte(null);
+            if (ultimo!=null) ultimo.setPunteiroSeguinte(null);
             tamanho--;
         }
     }
