@@ -59,14 +59,27 @@ public class ListaV2 {
     public int obterPrimeiro(){
         return inicio.getValor();
     }
-    /*
-    private Nodo nodoUltimo(){
+
+    private Nodo nodoPenultimo(){
         Nodo nodS = inicio;
-        while (nodS.getPunteiroSeguinte()!=null){
+        while (nodS.getPunteiroSeguinte()!=ultimo){
             nodS=nodS.getPunteiroSeguinte();
         }
         return nodS;
     }
-    */
+
+
+    public void elimiarPrimeiro(){
+        if (tamanho!=0){
+            inicio=inicio.getPunteiroSeguinte();
+            tamanho--;
+        }
+    }
+    public void eliminarUltimo(){
+        if (tamanho!=0){
+            ultimo=nodoPenultimo();
+            tamanho--;
+        }
+    }
 
 }
