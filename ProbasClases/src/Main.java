@@ -149,5 +149,11 @@ public class Main {
 
         Data prueba = new Data("12-13/2025");
         System.out.println(prueba.toString());
+
+        lis.listar();
+        lis.eliminarUltimo();
+        lis.listar();
+        lis.elimiarPrimeiro();
+        lis.listar();
     }
 }

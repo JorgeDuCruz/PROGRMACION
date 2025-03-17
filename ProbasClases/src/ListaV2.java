@@ -35,13 +35,12 @@ public class ListaV2 {
     public void listar(){
         String lista="";
         Nodo nodS=inicio;
-        for (int i =0;i<tamanho;i++){
-            if (nodS!=null){
+
+            while (nodS!=null){
                 lista=lista+nodS.getValor()+",";
                 nodS=nodS.getPunteiroSeguinte();
             }
-            else break;
-        }
+
         System.out.println(lista+"\b");
     }
     public void engadirUltimo(int valor){
@@ -89,6 +88,7 @@ public class ListaV2 {
     public void eliminarUltimo(){
         if (!estaValeira()){
             ultimo=nodoPenultimo();
+            ultimo.setPunteiroSeguinte(null);
             tamanho--;
         }
     }
