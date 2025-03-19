@@ -9,8 +9,8 @@ public class ImplementaLifo extends ListaV2 implements Lifo{
 
     @Override
     public int desapilar() {
-        int pri = obterPrimeiro();
-        elimiarPrimeiro();
-        return pri;
+        int ult = obterValor(getTamanho()-1);
+        eliminarUltimo();
+        return ult;
     }
 }

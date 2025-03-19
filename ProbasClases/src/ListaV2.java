@@ -109,4 +109,15 @@ public class ListaV2 {
         }
     }
 
+    public int obterValor(int indice){
+        if (tamanho>Math.abs(indice)){
+            Nodo nodS=inicio;
+            for (int i =0;i<indice;i++){
+                nodS=nodS.getPunteiroSeguinte();
+            }
+            return nodS.getValor();
+        }
+        else  return inicio.getValor();
+    }
+
 }
