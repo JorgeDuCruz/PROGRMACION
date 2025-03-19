@@ -9,7 +9,7 @@ public class ImplementaLifo extends ListaV2 implements Lifo{
 
     @Override
     public int desapilar() {
-        int ult = obterValor(getTamanho()-1);
+        int ult = getNodo(getTamanho()-1);
         eliminarUltimo();
         return ult;
     }

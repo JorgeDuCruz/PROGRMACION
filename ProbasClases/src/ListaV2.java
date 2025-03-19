@@ -109,15 +109,22 @@ public class ListaV2 {
         }
     }
 
-    public int obterValor(int indice){
-        if (tamanho>Math.abs(indice)){
+    public int getNodo(int indice){
+        if (indice<0){
+            System.out.println("Indice no puede ser negativo, se retornara -1");
+            return -1;
+        }
+        else if (tamanho>indice){
             Nodo nodS=inicio;
             for (int i =0;i<indice;i++){
                 nodS=nodS.getPunteiroSeguinte();
             }
             return nodS.getValor();
         }
-        else  return inicio.getValor();
+        else  {
+            System.out.println("Indidce demasiado alto, se retornara -1");
+            return -1;
+        }
     }
 
 }
