@@ -1,10 +1,10 @@
-public class Pila extends ListaV2 implements Cola{
+public class ImplementacionCola extends ListaV2 implements Cola{
 
-    public Pila() {
+    public ImplementacionCola() {
         super();
     }
 
-    public Pila(Nodo inicio) {
+    public ImplementacionCola(Nodo inicio) {
         super(inicio);
     }
 
