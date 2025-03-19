@@ -15,7 +15,7 @@ public class Pila extends ListaV2 implements Cola{
 
     @Override
     public int desencolar() {
-        int pri = obterPrimeiro();
+        int pri = getNodo(0);
         elimiarPrimeiro();
         return pri;
     }
