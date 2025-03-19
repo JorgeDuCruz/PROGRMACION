@@ -1,4 +1,4 @@
-public class Pila extends ListaV2 implements Lifo{
+public class Pila extends ListaV2 implements Cola{
 
     public Pila() {
         super();
@@ -9,12 +9,12 @@ public class Pila extends ListaV2 implements Lifo{
     }
 
     @Override
-    public void apilar(int valor) {
+    public void encolar(int valor) {
         engadirUltimo(valor);
     }
 
     @Override
-    public int desapilar() {
+    public int desencolar() {
         int pri = obterPrimeiro();
         elimiarPrimeiro();
         return pri;
