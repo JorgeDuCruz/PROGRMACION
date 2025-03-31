@@ -21,7 +21,7 @@ import java.util.Arrays;
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws ExcepcionPuntoForaPrimeiroCadrante {
 
         String[] hab ={"Rayo hielo", "Gran Salto","Fuego","Agua"};
         String[] equi ={"Alas de ícaro", "Ray gun","Hoja del Olimpo","Espadas del Caos","Botas de hermes","Gi naranja"};
@@ -155,5 +155,7 @@ public class Main {
         lis.listar();
         lis.elimiarPrimeiro();
         lis.listar();
+
+        Cadrado cad = new Cadrado(2,-1,5);
     }
 }

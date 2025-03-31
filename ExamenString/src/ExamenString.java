@@ -1,6 +1,6 @@
 public class ExamenString {
         public static void main(String[] args) {
-            System.out.println(Acronimo("Open Systems Interconnection"));
+            System.out.println(Acronimo("     Open     Systems Interconnection"));
             System.out.println(Invertir2("Open Systems Interconnection"));
         }
 
