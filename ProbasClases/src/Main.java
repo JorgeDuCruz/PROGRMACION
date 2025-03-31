@@ -10,6 +10,9 @@ import B10Ej2SoloInterface.MembroAsociacionIN;
 import B10Ej2SoloInterface.SociosIN;
 import Boletin10Ej2.*;
 import Datas.Data;
+import Datas.ExcepcionAnoIncorrecto;
+import Datas.ExcepcionDiaIncorrecto;
+import Datas.ExcepcionMesIncorrecto;
 import Geometria.*;
 import Persoas.ContaCorrente;
 import Persoas.Persoaxe;
@@ -21,7 +24,7 @@ import java.util.Arrays;
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
-    public static void main(String[] args)  {
+    public static void main(String[] args) throws ExcepcionDiaIncorrecto, ExcepcionMesIncorrecto, ExcepcionAnoIncorrecto {
 
         String[] hab ={"Rayo hielo", "Gran Salto","Fuego","Agua"};
         String[] equi ={"Alas de ícaro", "Ray gun","Hoja del Olimpo","Espadas del Caos","Botas de hermes","Gi naranja"};

@@ -1,28 +1,31 @@
 package Datas;
-
 public class Data {
     private int dia;
     private int mes;
     private int ano;
     //MAIN
     public static void main(String[] args) {
-        Data data1 = new Data(29,12,2001);
+        try {
+            Data data1 = new Data(29,12,2001);
+        }catch (ExcepcionDiaIncorrecto | ExcepcionMesIncorrecto | ExcepcionAnoIncorrecto e){
+            System.out.println(e.getMessage());
+        }
     }
     //CONSTRUCTORES
 
-    public Data(int dia, int mes, int ano) {
+    public Data(int dia, int mes, int ano) throws ExcepcionDiaIncorrecto, ExcepcionMesIncorrecto, ExcepcionAnoIncorrecto {
         setMes(mes);
         setAno(ano);
         setDia(dia);
     }
 
-    public Data(int dia, int mes) {
+    public Data(int dia, int mes) throws ExcepcionDiaIncorrecto, ExcepcionMesIncorrecto {
         setMes(mes);
         ano=2025;
         setDia(dia);
     }
 
-    public Data(String data){
+    public Data(String data) throws ExcepcionDiaIncorrecto, ExcepcionMesIncorrecto, ExcepcionAnoIncorrecto {
         setData(data);
     }
 
@@ -46,7 +49,7 @@ public class Data {
         return iguais;
     }
 
-    public String incrementarDia(int dias){
+    public String incrementarDia(int dias) throws ExcepcionMesIncorrecto, ExcepcionAnoIncorrecto {
         if (dia+dias>diaLimite()) { //si el dia esta en el limite cambia de mes
             dia = dias+dia-diaLimite();
             incrementarMes();
@@ -56,7 +59,7 @@ public class Data {
         return toString();
     }
 
-    public void incrementarMes(){
+    public void incrementarMes() throws ExcepcionMesIncorrecto, ExcepcionAnoIncorrecto {
         if (mes==12){
             setMes(1);
             setAno(ano+1);
@@ -64,7 +67,7 @@ public class Data {
         else setMes(mes+1);
     }
 
-    public void incrementarAno(){
+    public void incrementarAno() throws ExcepcionAnoIncorrecto {
         setAno(ano+1);
     }
 
@@ -103,26 +106,26 @@ public class Data {
     }
     //SETTERS
 
-    public void setDia(int dia) {
+    public void setDia(int dia) throws ExcepcionDiaIncorrecto {
         if (dia>0 && dia<=diaLimite()){
             this.dia=dia;
         }
-        else this.dia=1;
+        else throw new ExcepcionDiaIncorrecto();
     }
 
-    public void setMes(int mes) {
+    public void setMes(int mes) throws ExcepcionMesIncorrecto {
         if (mes<13 && mes>0){
             this.mes = mes;
         }
-        else this.mes=1;
+        else throw new ExcepcionMesIncorrecto();
     }
 
-    public void setAno(int ano) {
+    public void setAno(int ano) throws ExcepcionAnoIncorrecto {
         if (ano>-1) this.ano = ano;
-        else this.ano=2025;
+        else throw new ExcepcionAnoIncorrecto();
     }
 
-    private void setData(String data){
+    private void setData(String data) throws ExcepcionDiaIncorrecto, ExcepcionMesIncorrecto, ExcepcionAnoIncorrecto {
         String[] fecha = new String[3];
         if (data.contains("-")){
             fecha=data.split("-");
