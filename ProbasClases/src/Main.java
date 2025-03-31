@@ -156,6 +156,11 @@ public class Main {
         lis.elimiarPrimeiro();
         lis.listar();
 
-        Cadrado cad = new Cadrado(2,-1,5);
+        try {
+            Cadrado cad = new Cadrado(2,-1,5);
+        }catch (ExcepcionPuntoForaPrimeiroCadrante erro){
+            erro.getMessage();
+            System.out.println("Imposible crear o cadrado");
+        }
     }
 }
