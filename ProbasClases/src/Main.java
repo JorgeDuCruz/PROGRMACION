@@ -21,7 +21,7 @@ import java.util.Arrays;
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
-    public static void main(String[] args) throws ExcepcionPuntoForaPrimeiroCadrante {
+    public static void main(String[] args)  {
 
         String[] hab ={"Rayo hielo", "Gran Salto","Fuego","Agua"};
         String[] equi ={"Alas de ícaro", "Ray gun","Hoja del Olimpo","Espadas del Caos","Botas de hermes","Gi naranja"};
@@ -81,10 +81,15 @@ public class Main {
         Cadrado cd = new Cadrado(4.98);
         System.out.println("Superficie: "+cd.obterArea());
         System.out.println("Perimetro: "+cd.obterPerimetro());
-        Cubo cu= new Cubo(7,2,3);
-        System.out.println(cu.aCadea());
-        System.out.println(cu.volumen());
-        System.out.println(cu.obterArea());
+        try {
+            Cubo cu= new Cubo(2,-5,3);
+            System.out.println(cu.aCadea());
+            System.out.println(cu.volumen());
+            System.out.println(cu.obterArea());
+        }catch (ExcepcionPuntoForaPrimeiroCadrante e){
+            System.out.println(e.getMessage());
+            System.out.println("Imposible crear o cubo");
+        }
 
         Can ca = new Can("lopez",12);
         ca.desprazar();
@@ -159,7 +164,7 @@ public class Main {
         try {
             Cadrado cad = new Cadrado(2,-1,5);
         }catch (ExcepcionPuntoForaPrimeiroCadrante erro){
-            erro.getMessage();
+            System.out.println(erro.getMessage());
             System.out.println("Imposible crear o cadrado");
         }
     }
