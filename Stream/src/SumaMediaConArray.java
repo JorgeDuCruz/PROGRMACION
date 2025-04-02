@@ -12,8 +12,10 @@ public class SumaMediaConArray {
             while (linha !=null){
                 String [] numeros = linha.split(" ");
                 for (String num : numeros){
-                    suma = suma +Integer.parseInt(num);
-                    media++;
+                    if (!num.isEmpty()){
+                        suma = suma +Integer.parseInt(num);
+                        media++;
+                    }
                 }
                 linha = entrada.readLine();
             }
