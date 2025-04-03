@@ -6,5 +6,6 @@ public class Main {
         SumaMediaConArray.sumaMedia("src/ficheiroDeNumeros");
         System.out.println("3º tipo");
         MediaSumaFicheiroNumScanner.sumaMedia("src/ficheiroDeNumeros");
+        IntroducirNumeros.escribir("src/Numeros");
     }
 }
