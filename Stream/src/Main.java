@@ -4,5 +4,7 @@ public class Main {
         SumaMediaNumeros.sumaMedia("src/ficheiroDeNumeros");
         System.out.println("2º intento");
         SumaMediaConArray.sumaMedia("src/ficheiroDeNumeros");
+        System.out.println("3º tipo");
+        MediaSumaFicheiroNumScanner.sumaMedia("src/ficheiroDeNumeros");
     }
 }

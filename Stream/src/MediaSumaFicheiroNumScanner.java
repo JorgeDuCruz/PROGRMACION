@@ -2,7 +2,7 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 
-public class SumaMediaConArray {
+public class MediaSumaFicheiroNumScanner {
     public static void sumaMedia(String ruta){
         BufferedReader entrada=null;
         int suma=0,media=0;
