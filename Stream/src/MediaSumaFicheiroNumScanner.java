@@ -1,33 +1,31 @@
-import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.NoSuchElementException;
+import java.util.Scanner;
 
 public class MediaSumaFicheiroNumScanner {
     public static void sumaMedia(String ruta){
-        BufferedReader entrada=null;
+        Scanner entrada=null;
         int suma=0,media=0;
         try {
-            entrada = new BufferedReader(new FileReader(ruta));
-            String linha = entrada.readLine();
+            entrada = new Scanner(new FileReader(ruta));
+            String linha = entrada.nextLine();
             while (linha !=null){
-                String [] numeros = linha.split(" ");
-                for (String num : numeros){
-                    if (!num.isEmpty()){
-                        suma = suma +Integer.parseInt(num);
+                Scanner sc = new Scanner(linha);
+                while (sc.hasNext()){
+                        suma = suma + sc.nextInt();
                         media++;
-                    }
                 }
-                linha = entrada.readLine();
+                linha = entrada.nextLine();
             }
         }catch (IOException e){
             System.out.println(e.getMessage());
-        }finally {
+        }catch (NoSuchElementException e){
+            System.out.println("No se encontro linea siguiente");
+        }
+        finally {
             if (entrada!=null){
-                try {
-                    entrada.close();
-                }catch (IOException e){
-                    System.out.println(e.getMessage());
-                }
+               entrada.close();
             }
         }
         if (media==0) System.out.println("No hay numeros");
