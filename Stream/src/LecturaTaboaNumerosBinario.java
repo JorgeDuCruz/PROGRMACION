@@ -6,10 +6,11 @@ public class LecturaTaboaNumerosBinario {
         try{
             fluxoEntrada = new ObjectInputStream(new FileInputStream(rutaFicheiro));
             int num;
-            while (true){
+            while (fluxoEntrada.available()!=0){
                 num=fluxoEntrada.readInt();
                 System.out.println(num);
             }
+            System.out.println("Fin del archivo");
         }catch (FileNotFoundException e){
             System.out.println("Erro: Fichiero non encontrado. "+e.getMessage());
         }catch (EOFException e){

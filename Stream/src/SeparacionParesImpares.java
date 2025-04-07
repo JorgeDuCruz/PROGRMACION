@@ -9,7 +9,7 @@ public class SeparacionParesImpares {
             pares = new ObjectOutputStream(new FileOutputStream("pares.dat"));
             impares = new ObjectOutputStream(new FileOutputStream("impares.dat"));
             int num;
-            while (true){
+            while (fluxoEntrada.available()!=0){
                 num=fluxoEntrada.readInt();
                 if (num%2==0){
                     pares.writeInt(num);
@@ -19,7 +19,6 @@ public class SeparacionParesImpares {
             }
         }catch (FileNotFoundException e){
             System.out.println("Erro: Fichiero non encontrado. "+e.getMessage());
-        }catch (EOFException e){
         }catch (IOException e){
             System.out.println("Erro: Entrada/Saída. "+e.getMessage());
         }finally {
