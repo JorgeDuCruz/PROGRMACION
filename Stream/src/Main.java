@@ -11,5 +11,8 @@ public class Main {
         int[] taboa = {12,15,45,100,0,12,15,48,68,79,89,85,55,4613,1021,10};
         new EscrituraTaboaNumerosBinaria(taboa);
         new LecturaTaboaNumerosBinario("numeros.dat");
+        new SeparacionParesImpares("numeros.dat");
+        new LecturaTaboaNumerosBinario("pares.dat");
+        new LecturaTaboaNumerosBinario("impares.dat");
     }
 }
