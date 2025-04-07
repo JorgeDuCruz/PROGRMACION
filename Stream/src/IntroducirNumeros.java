@@ -11,11 +11,11 @@ public class IntroducirNumeros {
         String numero;
         try{
             salida = new BufferedWriter(new FileWriter(ruta));
-            System.out.println("Escribe los numeros:");
+            System.out.println("Escribe los numeros:(Para parar el escribe '.')");
             do {
                 numero = sc.next();
                 salida.write(numero+" ");
-            }while (!numero.isEmpty());
+            }while (!numero.equals("."));
         }catch (IOException e){
             System.out.println(e.getMessage());
         }finally {
