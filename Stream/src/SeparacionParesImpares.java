@@ -3,18 +3,18 @@ import java.io.*;
 public class SeparacionParesImpares {
     public SeparacionParesImpares (String rutaFicheiro){
         ObjectInputStream fluxoEntrada = null;
-        ObjectOutputStream pares=null,impares=null;
+        ObjectOutputStream fluxoSaidaPares=null,fluxoSaidaImpares=null;
         try{
             fluxoEntrada = new ObjectInputStream(new FileInputStream(rutaFicheiro));
-            pares = new ObjectOutputStream(new FileOutputStream("pares.dat"));
-            impares = new ObjectOutputStream(new FileOutputStream("impares.dat"));
+            fluxoSaidaPares = new ObjectOutputStream(new FileOutputStream("pares.dat"));
+            fluxoSaidaImpares = new ObjectOutputStream(new FileOutputStream("impares.dat"));
             int num;
             while (fluxoEntrada.available()!=0){
                 num=fluxoEntrada.readInt();
                 if (num%2==0){
-                    pares.writeInt(num);
+                    fluxoSaidaPares.writeInt(num);
                 }else {
-                    impares.writeInt(num);
+                    fluxoSaidaImpares.writeInt(num);
                 }
             }
         }catch (FileNotFoundException e){
@@ -29,16 +29,16 @@ public class SeparacionParesImpares {
                     System.out.println("Erro: Pechando o ficheiro "+e.getMessage());
                 }
             }
-            if (pares!=null){
+            if (fluxoSaidaPares!=null){
                 try{
-                    pares.close();
+                    fluxoSaidaPares.close();
                 }catch (IOException e){
                     System.out.println("Erro: Pechando o ficheiro "+e.getMessage());
                 }
             }
-            if (impares!=null){
+            if (fluxoSaidaImpares!=null){
                 try{
-                    impares.close();
+                    fluxoSaidaImpares.close();
                 }catch (IOException e){
                     System.out.println("Erro: Pechando o ficheiro "+e.getMessage());
                 }
