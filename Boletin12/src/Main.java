@@ -12,11 +12,11 @@ public class Main {
                 case 1->ListaClientes.ListarClientes("Clientes.dat");
                 case 2->{
                     Cliente clienteNovo=EngadirCliente(sc);
-                    ListaClientes.EngadirNovoCliente("Clientes.dat",clienteNovo);
+                    if (clienteNovo!=null)ListaClientes.EngadirNovoCliente("Clientes.dat",clienteNovo);
                 }
                 case 3-> {
                     Cliente clienteMod=PreguntarModificaciones(sc);
-                    ListaClientes.ModificarDatos("Clientes.dat", clienteMod.getId(), clienteMod.getNome(), clienteMod.getTelefono());
+                    if (clienteMod!=null)ListaClientes.ModificarDatos("Clientes.dat", clienteMod.getId(), clienteMod.getNome(), clienteMod.getTelefono());
                 }
                 case 4->{
                     String id=PreguntarID(sc,"Cual es el ID del cliente que va a dar de baja? Escriba su ID");
@@ -51,7 +51,12 @@ public class Main {
             System.out.println("Cual es el nuevo telefono?");
             telefono= sc.nextInt();
         }
-        return new Cliente(id,nome,telefono);
+        try {
+            return new Cliente(id,nome,telefono);
+        }catch (ExcepcionTelefonoNoValido e){
+            System.out.println(e.getMessage());
+            return null;
+        }
     }
 
     private static Cliente EngadirCliente(Scanner sc) {
@@ -62,6 +67,12 @@ public class Main {
             nome = sc.next();
             System.out.println("Cual es el teléfono del nuevo cliente");
             telefono= sc.nextInt();
-        return new Cliente(id,nome,telefono);
+
+        try {
+            return new Cliente(id,nome,telefono);
+        }catch (ExcepcionTelefonoNoValido e){
+            System.out.println(e.getMessage());
+            return null;
+        }
     }
 }

@@ -25,10 +25,11 @@ public class ListaClientes {
         try {
             if (!nome.isBlank()) clienteMod.setNome(nome);
             if (telefono!=100000000)clienteMod.setTelefono(telefono);
-        }catch (NullPointerException e){
+            clientes[posicionCliente]=clienteMod;
+        }catch (NullPointerException | ArrayIndexOutOfBoundsException e){
             System.out.println("Cliente no encontrado "+e.getMessage());
         }
-        clientes[posicionCliente]=clienteMod;
+
         EscribirDatos(ruta,clientes);
     }
 
