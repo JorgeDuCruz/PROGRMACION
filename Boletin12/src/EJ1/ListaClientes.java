@@ -1,3 +1,5 @@
+package EJ1;
+
 import java.io.*;
 
 public class ListaClientes {
@@ -27,7 +29,7 @@ public class ListaClientes {
             if (telefono!=100000000)clienteMod.setTelefono(telefono);
             clientes[posicionCliente]=clienteMod;
         }catch (NullPointerException | ArrayIndexOutOfBoundsException e){
-            System.out.println("Cliente no encontrado "+e.getMessage());
+            System.out.println("EJ1.Cliente no encontrado "+e.getMessage());
         }
 
         EscribirDatos(ruta,clientes);

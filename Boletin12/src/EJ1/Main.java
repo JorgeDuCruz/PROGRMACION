@@ -1,3 +1,5 @@
+package EJ1;
+
 import java.util.Scanner;
 
 public class Main {
@@ -6,21 +8,21 @@ public class Main {
         int accion;
 
         do {
-            System.out.println("Que quieres hacer? 1:Listar Clientes. 2:Engadir Cliente. 3:Modificar datos de un Cliente. 4:Dar de baja a un Cliente. -1:Apagar");
+            System.out.println("Que quieres hacer? 1:Listar Clientes. 2:Engadir EJ1.Cliente. 3:Modificar datos de un EJ1.Cliente. 4:Dar de baja a un EJ1.Cliente. -1:Apagar");
             accion= sc.nextInt();
             switch (accion){
-                case 1->ListaClientes.ListarClientes("Clientes.dat");
+                case 1-> ListaClientes.ListarClientes("src/EJ1/Clientes.dat");
                 case 2->{
                     Cliente clienteNovo=EngadirCliente(sc);
-                    if (clienteNovo!=null)ListaClientes.EngadirNovoCliente("Clientes.dat",clienteNovo);
+                    if (clienteNovo!=null)ListaClientes.EngadirNovoCliente("src/EJ1/Clientes.dat",clienteNovo);
                 }
                 case 3-> {
                     Cliente clienteMod=PreguntarModificaciones(sc);
-                    if (clienteMod!=null)ListaClientes.ModificarDatos("Clientes.dat", clienteMod.getId(), clienteMod.getNome(), clienteMod.getTelefono());
+                    if (clienteMod!=null)ListaClientes.ModificarDatos("src/EJ1/Clientes.dat", clienteMod.getId(), clienteMod.getNome(), clienteMod.getTelefono());
                 }
                 case 4->{
                     String id=PreguntarID(sc,"Cual es el ID del cliente que va a dar de baja? Escriba su ID");
-                    ListaClientes.DarDeBaixaCliente("Clientes.dat",id);
+                    ListaClientes.DarDeBaixaCliente("src/EJ1/Clientes.dat",id);
                 }
             }
         }while (accion!=-1);

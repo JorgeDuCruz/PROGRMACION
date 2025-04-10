@@ -1,3 +1,5 @@
+package EJ1;
+
 public class ExcepcionTelefonoNoValido extends RuntimeException {
     @Override
     public String toString() {
