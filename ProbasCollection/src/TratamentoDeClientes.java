@@ -1,0 +1,32 @@
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Iterator;
+
+public class TratamentoDeClientes {
+    public static void main(String[] args){
+        Collection<Cliente> coleccionCliente;
+        coleccionCliente = new ArrayList<>();
+        coleccionCliente.add(new Cliente("00000023T","Pepe","12/05/1989"));
+        coleccionCliente.add(new Cliente("00000024S","jose","19/06/1995"));
+        coleccionCliente.add(new Cliente("00000025S","McLovin","13/07/2015"));
+        System.out.println(coleccionCliente);
+        Cliente unCliente = new Cliente("02000025S","Cabo","11/08/2013");
+        coleccionCliente.add(unCliente);
+
+
+        Object[] col= coleccionCliente.toArray();
+        System.out.println(col[0]);
+
+        Iterator<Cliente> iterador = coleccionCliente.iterator();
+        for (; iterador.hasNext();){
+            System.out.println(iterador.next());
+        }
+
+        System.out.println(coleccionCliente.size());
+        coleccionCliente.remove(unCliente);
+
+        coleccionCliente.clear();
+        System.out.println(coleccionCliente.isEmpty());
+        System.out.println(coleccionCliente.contains(unCliente));
+    }
+}
