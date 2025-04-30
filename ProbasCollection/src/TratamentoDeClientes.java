@@ -18,9 +18,18 @@ public class TratamentoDeClientes {
         System.out.println(col[0]);
 
         Iterator<Cliente> iterador = coleccionCliente.iterator();
+        int cantidadClientes =0;
+        int edadTotal =0;
         for (; iterador.hasNext();){
-            System.out.println(iterador.next());
+            edadTotal = edadTotal + iterador.next().edade();
+            cantidadClientes++;
         }
+
+        if (cantidadClientes!=0){
+            edadTotal = edadTotal/cantidadClientes;
+        }
+
+        System.out.println(edadTotal);
 
         System.out.println(coleccionCliente.size());
         coleccionCliente.remove(unCliente);
