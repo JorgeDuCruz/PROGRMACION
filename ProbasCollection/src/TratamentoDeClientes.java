@@ -60,5 +60,7 @@ public class TratamentoDeClientes {
         coleccionCliente.addAll(outrosClientes);
         System.out.println(coleccionCliente);
         System.out.println(coleccionCliente.containsAll(outrosClientes));
+        coleccionCliente.retainAll(outrosClientes);
+        System.out.println(coleccionCliente);
     }
 }
