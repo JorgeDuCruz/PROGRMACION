@@ -48,8 +48,16 @@ public class TratamentoDeClientes {
         System.out.println(coleccionCliente.size());
         coleccionCliente.remove(unCliente);
 
-        coleccionCliente.clear();
+        //coleccionCliente.clear();
         System.out.println(coleccionCliente.isEmpty());
         System.out.println(coleccionCliente.contains(unCliente));
+
+        Collection<Cliente> outrosClientes = new ArrayList<>();
+        outrosClientes.add(new Cliente("546M","Juan","24/02/1985"));
+        outrosClientes.add(new Cliente("4896C","Mari","10/03/1998"));
+        outrosClientes.add(new Cliente("123456U","Victor","11/04/2018"));
+
+        coleccionCliente.addAll(outrosClientes);
+        System.out.println(coleccionCliente);
     }
 }
