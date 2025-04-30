@@ -2,12 +2,13 @@
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        /*
+
         Contedor<Integer> num = new Contedor<Integer>();
         num.gardar(5);
         int n = num.extraer();
         System.out.println(n);
         Contedor<String> cad = new Contedor<>();
+        Contedor<?> contedorParaCalqueraTipo = new Contedor<Integer>();
         cad.gardar("Hola");
         String st = cad.extraer();
         System.out.println(st);
@@ -35,7 +36,7 @@ public class Main {
         System.out.println(t.desencolar());
         System.out.println(t.desencolar());
 
-         */
+
         Cliente cl=new Cliente("00000000T","Pepe","21/02/2015");
         System.out.println(cl.toString());
     }
