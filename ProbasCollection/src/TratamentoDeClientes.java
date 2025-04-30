@@ -18,10 +18,22 @@ public class TratamentoDeClientes {
         System.out.println(col[0]);
 
         Iterator<Cliente> iterador = coleccionCliente.iterator();
+
+        for (; iterador.hasNext();){
+            if (iterador.next().dni.equals("00000023T")){
+                iterador.remove();
+            }
+        }
+        System.out.println(coleccionCliente);
+
+        /*
+
         int cantidadClientes =0;
         int edadTotal =0;
+
         for (; iterador.hasNext();){
             edadTotal = edadTotal + iterador.next().edade();
+
             cantidadClientes++;
         }
 
@@ -30,6 +42,8 @@ public class TratamentoDeClientes {
         }
 
         System.out.println(edadTotal);
+
+         */
 
         System.out.println(coleccionCliente.size());
         coleccionCliente.remove(unCliente);
