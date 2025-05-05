@@ -7,9 +7,9 @@ public class ListaPositivosPorTeclado {
     //Despues muestra los poscionados en indices pares *100
     public static void main(String[] args) {
         List<Integer> list = new ArrayList<>();
-        mostrar(escaneo(list));
+        mostrarCadaDos(escanearListaNumerosPos(list));
     }
-    public static List<Integer>  escaneo(List<Integer> lista){
+    public static List<Integer> escanearListaNumerosPos(List<Integer> lista){
         Scanner sc = new Scanner(System.in);
         int n = 0;
         while (n!=-1) {
@@ -23,7 +23,7 @@ public class ListaPositivosPorTeclado {
         }
         return lista;
     }
-    public static void mostrar(List<Integer> lista){
+    public static void mostrarCadaDos(List<Integer> lista){
         System.out.println(lista);
         for (int i =0;i< lista.size();i+=2){
             System.out.println(lista.get(i)*100);
