@@ -17,6 +17,8 @@ public class ListaPositivosPorTeclado {
             n=sc.nextInt();
             if (n>-1){
                 lista.add(n);
+            } else if (n<-1) {
+                System.out.println("Solo numeros positivos");
             }
         }
         return lista;
