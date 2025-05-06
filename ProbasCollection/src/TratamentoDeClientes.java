@@ -1,6 +1,4 @@
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Iterator;
+import java.util.*;
 
 public class TratamentoDeClientes {
     public static void main(String[] args){
@@ -9,7 +7,14 @@ public class TratamentoDeClientes {
         coleccionCliente.add(new Cliente("00000023T","Pepe","12/05/1989"));
         coleccionCliente.add(new Cliente("00000024S","jose","19/06/1995"));
         coleccionCliente.add(new Cliente("00000025S","McLovin","13/07/2015"));
+
+        System.out.println("Coleccion desordenada");
         System.out.println(coleccionCliente);
+
+        System.out.println("Coleccion ordenada por nome");
+        ((List<Cliente>) coleccionCliente).sort(new ComparadorNome());
+        System.out.println(coleccionCliente);
+
         Cliente unCliente = new Cliente("02000025S","Cabo","11/08/2013");
         coleccionCliente.add(unCliente);
 
