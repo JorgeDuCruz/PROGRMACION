@@ -1,6 +1,4 @@
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.TreeSet;
+import java.util.*;
 
 public class ColeccionEnterosSet {
     //Conjunto de 20 numero enteros entre 1 y 10
@@ -8,10 +6,12 @@ public class ColeccionEnterosSet {
     //Un conjunto con numeros repetidos
     //UN conjunto con los numeros que solo aparecen 1 vez
     public static void main(String[] args) {
-        Collection<Integer> conxOri = new ArrayList<>();
+        List<Integer> conxOri = new ArrayList<>();
         for (int i = 0 ;i<20;i++){
             conxOri.add((int)Math.floor(Math.random()*10)+1);
         }
+        Comparator<Integer> c = Comparator.naturalOrder();
+        conxOri.sort(c);
         System.out.println(conxOri);
 
         TreeSet<Integer> conxSinRep = new TreeSet<>();
