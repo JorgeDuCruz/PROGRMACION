@@ -14,12 +14,12 @@ public class ColeccionEnterosSet {
         conxOri.sort(c);
         System.out.println(conxOri);
 
-        TreeSet<Integer> conxSinRep = new TreeSet<>();
+        HashSet<Integer> conxSinRep = new HashSet<>();
         conxSinRep.addAll(conxOri);
         System.out.println(conxSinRep);
 
-        TreeSet<Integer> conxUnaVez = new TreeSet<>();
-        TreeSet<Integer> repetidos = new TreeSet<>();
+        HashSet<Integer> conxUnaVez = new HashSet<>();
+        HashSet<Integer> repetidos = new HashSet<>();
         boolean repetido;
         for (Integer num:conxOri){
             repetido = conxUnaVez.add(num);
