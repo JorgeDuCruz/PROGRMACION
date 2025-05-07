@@ -19,12 +19,16 @@ public class ExemploMap {
         System.out.println(claves);
         Collection<Integer> valores = mapa.values();
         System.out.println(valores);
+
         Set<Map.Entry<String,Integer>> entradas = mapa.entrySet();
         System.out.println(entradas);
+
+        //Iteracion del mapa con un for-each
         for (Map.Entry<String,Integer> entrada:entradas){
             System.out.println(entrada);
         }
 
+        //Iteracion del mapa con un for y un elemento Iterator
         Iterator<Map.Entry<String,Integer>> it;
         for (it = entradas.iterator();it.hasNext();){
             Map.Entry<String,Integer> elemento = it.next();
@@ -32,6 +36,7 @@ public class ExemploMap {
             System.out.println("Valor "+elemento.getValue());
         }
 
+        //Iteracion del mapa con un for y usando una Vista de las llaves y no del mapa entero
         for (String clave:claves){
             System.out.println("LLave: "+clave+" Valor: "+mapa.get(clave));
         }
