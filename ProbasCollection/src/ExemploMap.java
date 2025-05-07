@@ -40,5 +40,20 @@ public class ExemploMap {
         for (String clave:claves){
             System.out.println("LLave: "+clave+" Valor: "+mapa.get(clave));
         }
+        mapa.put("Piero",45);
+        mapa.put("Juan",31);
+
+        for (Map.Entry<String,Integer> entrada:entradas){
+            if (entrada.getValue()<30){
+                entrada.setValue(20);
+            }
+        }
+        for (it = entradas.iterator(); it.hasNext();){
+            Map.Entry<String,Integer> elemneto = it.next();
+            if (elemneto.getValue()==20){
+                it.remove();
+            }
+        }
+        System.out.println(mapa);
     }
 }
