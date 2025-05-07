@@ -67,5 +67,9 @@ public class TratamentoDeClientes {
         System.out.println(coleccionCliente.containsAll(outrosClientes));
         coleccionCliente.retainAll(outrosClientes);
         System.out.println(coleccionCliente);
+
+        //Metodos Collections
+        int indice = Collections.binarySearch((List<Cliente>)coleccionCliente,new Cliente("123456U","Victor","11/04/2018"),new ComparadorNome());
+        System.out.println(indice);
     }
 }
