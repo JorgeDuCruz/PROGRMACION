@@ -28,5 +28,13 @@ public class Cliente implements Comparable<Cliente>{
         DateTimeFormatter formatoData = DateTimeFormatter.ofPattern("dd/MM/yyyy");
         return "DNI: "+dni+", Nome: "+nome+", Edade: "+edade()+", Data nacemento: "+dataNacemento.format(formatoData);
     }
+
+    public boolean equals(Object obj){
+        if (obj instanceof Cliente) {
+            return this.dni.equals(((Cliente) obj).dni);
+        } else {
+            return false;
+        }
+    }
 }
 
