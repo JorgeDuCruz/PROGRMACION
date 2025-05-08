@@ -14,6 +14,10 @@ public class ExemploClaseCollections {
         coleccionCliente.add( new Cliente("02000025S","Cabo","11/08/2013"));
 
         System.out.println(coleccionCliente);
+
+        System.out.println(Collections.max(coleccionCliente));
+        System.out.println(Collections.max(coleccionCliente, new CompararDNI()));
+
         Collections.sort(coleccionCliente,new CompararDNI());
         int indiceProba = Collections.binarySearch(coleccionCliente,new Cliente(null,"","01/01/0011"));
         System.out.println(coleccionCliente);
