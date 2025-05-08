@@ -34,6 +34,8 @@ public class ExemploClaseCollections {
 
         Collections.replaceAll(coleccionCliente,coleccionCliente.get(0),new Cliente("7777Z","Ryu","10/05/0753"));
         System.out.println(coleccionCliente);
+
+        /*
         Collections.fill(coleccionCliente,new Cliente("1111A","Syr","01/02/0001"));
         System.out.println(coleccionCliente);
 
@@ -47,5 +49,10 @@ public class ExemploClaseCollections {
 
         int frecuencia = Collections.frequency(coleccionCliente,new Cliente("1111A","Syr","01/02/0001"));
         System.out.println(frecuencia);
+
+         */
+        Collections.reverse(coleccionCliente);
+        System.out.println(coleccionCliente);
+
     }
 }
