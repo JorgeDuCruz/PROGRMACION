@@ -150,8 +150,12 @@ public class Menu {
             return false;
         }
     }
+
+    public Map<String,Integer> listarDatos(){
+        return existencias;
+    }
     public static void main(String[] args) {
-        Menu menu = new Menu("Bol3Ex10/datos.dat");
+        Menu menu = new Menu("datos.dat");
         int opcion;
         Scanner sc = new Scanner(System.in);
         do {
@@ -181,6 +185,9 @@ public class Menu {
                     System.out.println("Nueva cantidad del producto");
                     Integer can = sc.nextInt();
                     menu.modificarProducto(producto,can);
+                }
+                case 4 ->{
+                    System.out.println(menu.listarDatos());
                 }
                 default -> opcion=0;
             }
