@@ -11,7 +11,7 @@ public class Menu {
 
     public Menu(String ficheiro) {
         this.ficheiro = ficheiro;
-        this.existencias = cargarMapa();
+        this.existencias = cargarColeccion();
     }
 
     public void gardarMapa(Map<String,Integer> existencias){
@@ -103,6 +103,7 @@ public class Menu {
         }
         finally {
             try {
+                assert fluxoEntrada != null; // linea sugerido por idea, se debria poder omitir
                 fluxoEntrada.close();
             }catch (Exception e){
                 System.out.println(e.getMessage());
@@ -193,6 +194,6 @@ public class Menu {
             }
         }while (opcion!=0);
 
-        menu.gardarMapa(menu.existencias);
+        menu.gardarColeccion(menu.existencias);
     }
 }
