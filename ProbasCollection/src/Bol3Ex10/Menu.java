@@ -98,29 +98,20 @@ public class Menu {
             System.out.println(e.getMessage() + " FileNotFoundException");
         }catch (IOException e){
             System.out.println(e.getMessage() + " IOException");
-        }catch (Exception e){
+        }catch (ClassNotFoundException e){
             System.out.println(e.getMessage());
         }
         finally {
             try {
-                assert fluxoEntrada != null; // linea sugerido por idea, se debria poder omitir
-                fluxoEntrada.close();
-            }catch (Exception e){
+                if (fluxoEntrada!=null)fluxoEntrada.close();
+            }catch (IOException e){
                 System.out.println(e.getMessage());
             }
         }
         return mapa;
     }
 
-    private class Peza implements Serializable{
-        String referencia;
-        Integer cantidade;
 
-        private Peza(String referencia,Integer cantidade){
-            this.referencia=referencia;
-            this.cantidade=cantidade;
-        }
-    }
 
     public boolean altaProducto(String referencia){
         if (this.existencias.containsKey(referencia)){
