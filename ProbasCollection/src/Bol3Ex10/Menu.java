@@ -135,7 +135,7 @@ public class Menu {
 
     public boolean modificarProducto(String referencia,Integer cantidade){
         if (this.existencias.containsKey(referencia)){
-            this.existencias.replace(referencia,cantidade); // put tambien funcionaria
+            this.existencias.put(referencia,cantidade); // put tambien funcionaria
             return true;
         }
         else {
