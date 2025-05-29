@@ -1,4 +1,5 @@
 import java.sql.*;
+import java.util.Scanner;
 import java.util.Set;
 
 public class Main {
@@ -9,7 +10,10 @@ public class Main {
         try {
             conexion = DriverManager.getConnection(url, "jorge", "jorge");
             Statement sentencia = conexion.createStatement();
-            String select = "SELECT referencia,descripcion,cantidade,prezo from existencias order by referencia";
+            String select = "SELECT referencia,descripcion,cantidade,prezo from existencias";
+            System.out.println("Introduce la referencia da peza");
+            String resul = new Scanner(System.in).next();
+            select = select+" where referencia='"+resul+"'";
             ResultSet resultados = sentencia.executeQuery(select);
 
             while(resultados.next()){
