@@ -12,9 +12,13 @@ public class Main {
             Statement sentencia = conexion.createStatement();
             String select = "SELECT referencia,descripcion,cantidade,prezo from existencias";
             System.out.println("Introduce la referencia da peza");
-            String resul = new Scanner(System.in).next();
-            select = select+" where referencia='"+resul+"'";
-            ResultSet resultados = sentencia.executeQuery(select);
+            String resul = new Scanner(System.in).nextLine();
+            //select = select+" where referencia='"+resul+"'";
+
+            String outroSelect = "SELECT referencia,descripcion,cantidade,prezo from existencias where referencia = ?";
+            PreparedStatement sentenciaSQL = conexion.prepareStatement(outroSelect);
+            sentenciaSQL.setString(1,resul);
+            ResultSet resultados = sentenciaSQL.executeQuery();
 
             while(resultados.next()){
                 String referencia = resultados.getString("referencia");
